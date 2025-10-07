@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'madina';
+    src: url('madina.woff2') format('woff2'),
+        url('madina.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'madona';
+    src: url('madona.woff2') format('woff2'),
+        url('madona.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

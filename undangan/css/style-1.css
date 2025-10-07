@@ -1,0 +1,50 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
+@import url('/fonts/madina/style.css');
+@import url('/fonts/against/style.css');
+:root {
+    --inv-bg: #e2e3df;
+    --inv-base: #6D8789;
+    --inv-accent: #a3834e;
+    --inv-border: #ffffff;
+    --menu-bg: #f4f4f4;
+    --menu-inactive: #6D8789;
+    --menu-active: #6D8789;
+    --btn-color: #ffffff;
+    --font-base: "Oranienbaum", serif;
+    --font-accent: "Against", serif;
+    --font-latin: "Madina", cursive;
+}
+
+@keyframes wave-left {
+    0% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes wave-right {
+    0% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+.animate-right img {
+    transform-origin: top left;
+    animation: wave-right 4s ease-in-out infinite alternate;
+}
+
+.animate-left img {
+    transform-origin: bottom right;
+    animation: wave-left 4s ease-in-out infinite alternate;
+}
+
+.frame-out {display:none}
+.cover .frame-out {display:block}
+.editor-wrapper .frame-out {display:none}
+    
