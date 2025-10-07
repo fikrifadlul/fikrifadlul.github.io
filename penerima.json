@@ -1,0 +1,995 @@
+[
+    {
+      "id": 1,
+      "Nama": "Zuli",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI",
+      "Jenis Undangan": "Cetak",
+      "Mark": false,
+      "Ket": "SMK",
+      "Column8": "Cetak"
+    },
+    {
+      "id": 2,
+      "Nama": "Evi",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil",
+      "Jenis Undangan": "Cetak",
+      "Mark": false,
+      "Ket": "MTs",
+      "Column8": "Digital"
+    },
+    {
+      "id": 3,
+      "Nama": "Cak tain",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil",
+      "Jenis Undangan": "Cetak",
+      "Mark": false,
+      "Ket": "MI"
+    },
+    {
+      "id": 4,
+      "Nama": "husen",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil",
+      "Jenis Undangan": "Cetak",
+      "Mark": false,
+      "Ket": "Kuliah"
+    },
+    {
+      "id": 5,
+      "Nama": "ihsan",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil",
+      "Jenis Undangan": "Cetak",
+      "Mark": false,
+      "Ket": "Pondok Jombang"
+    },
+    {
+      "id": 6,
+      "Nama": "hanifah",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil",
+      "Jenis Undangan": "Cetak",
+      "Mark": false,
+      "Ket": "Pondok Ploso"
+    },
+    {
+      "id": 7,
+      "Nama": "nasikul",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil",
+      "Jenis Undangan": "Cetak",
+      "Mark": false,
+      "Ket": "Jamu Pahit"
+    },
+    {
+      "id": 8,
+      "Nama": "huri",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI",
+      "Jenis Undangan": "Cetak",
+      "Mark": false,
+      "Ket": "Rumah/Tetangga/Teman Kecil"
+    },
+    {
+      "id": 9,
+      "Nama": "arip",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil",
+      "Jenis Undangan": "Cetak",
+      "Mark": false,
+      "Ket": "Pondok PPTA"
+    },
+    {
+      "id": 10,
+      "Nama": "jafar",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 11,
+      "Nama": "ibnu",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 12,
+      "Nama": "Aripin",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI",
+      "Jenis Undangan": "Cetak",
+      "Mark": false,
+      "Column9": "pengurus mambaul maarif"
+    },
+    {
+      "id": 13,
+      "Nama": "misbahudin",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI, MTs, SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false,
+      "Column9": "pengurus PPTA"
+    },
+    {
+      "id": 14,
+      "Nama": "uswatun hasanah",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 15,
+      "Nama": "ika",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 16,
+      "Nama": "afis",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 17,
+      "Nama": "ririn",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 18,
+      "Nama": "irfan/imro (sekalian)",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 19,
+      "Nama": "ma'sum",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 20,
+      "Nama": "ghofur",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 21,
+      "Nama": "mila",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 22,
+      "Nama": "ifa",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 23,
+      "Nama": "khoirul",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 24,
+      "Nama": "nurudin",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 25,
+      "Nama": "dewi",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 26,
+      "Nama": "faul",
+      "Rekanan": "MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 27,
+      "Nama": "fuad",
+      "Rekanan": "MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 28,
+      "Nama": "Nur Syaifuddin",
+      "Rekanan": "MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 29,
+      "Nama": "masita/budi (sekalian)",
+      "Rekanan": "MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 30,
+      "Nama": "mila (supri)",
+      "Rekanan": "Teman",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 31,
+      "Nama": "agus",
+      "Rekanan": "MI, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 32,
+      "Nama": "birru",
+      "Rekanan": "MI, MTs, SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 33,
+      "Nama": "abdul/kiamat (sekalian)",
+      "Rekanan": "SMK, IKS",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 34,
+      "Nama": "bayu",
+      "Rekanan": "SMK, IKS",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 35,
+      "Nama": "bagus",
+      "Rekanan": "SMK, IKS",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 36,
+      "Nama": "nur (bu um)",
+      "Rekanan": "Teman",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 37,
+      "Nama": "musthofa",
+      "Rekanan": "MI",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 38,
+      "Nama": "takul",
+      "Rekanan": "MI",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 39,
+      "Nama": "ibad",
+      "Rekanan": "MI",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 40,
+      "Nama": "fajar",
+      "Rekanan": "Teman",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 41,
+      "Nama": "emi farida",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 42,
+      "Nama": "febry",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 43,
+      "Nama": "ria fardiana",
+      "Rekanan": "Rumah/Tetangga/Teman Kecil, SMK, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 44,
+      "Nama": "hanip",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 45,
+      "Nama": "haris",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 46,
+      "Nama": "idvia damayanti",
+      "Rekanan": "SMK, Kuliah",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 47,
+      "Nama": "tetti",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 48,
+      "Nama": "aris/nyeng",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 49,
+      "Nama": "fiki",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 50,
+      "Nama": "farid",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 51,
+      "Nama": "lia adenita",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 52,
+      "Nama": "fidhotul ilmiah",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 53,
+      "Nama": "kharis",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 54,
+      "Nama": "elsa wahyuhidayat",
+      "Rekanan": "SMK, MTs",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 55,
+      "Nama": "april",
+      "Rekanan": "SMK",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 56,
+      "Nama": "Gus husen",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 57,
+      "Nama": "mas khafid",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 58,
+      "Nama": "rifat",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 59,
+      "Nama": "ibad",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 60,
+      "Nama": "rozi",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 61,
+      "Nama": "rusman",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 62,
+      "Nama": "ilung",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 63,
+      "Nama": "dafi",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 64,
+      "Nama": "nasrul",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 65,
+      "Nama": "fauzan",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 66,
+      "Nama": "ilmi",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 67,
+      "Nama": "fikri",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 68,
+      "Nama": "fatah",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 69,
+      "Nama": "alawi",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 70,
+      "Nama": "bagol",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 71,
+      "Nama": "bastomi",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 72,
+      "Nama": "dzikri",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 73,
+      "Nama": "mahfud",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 74,
+      "Nama": "munir",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 75,
+      "Nama": "panjul",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 76,
+      "Nama": "ropeq",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 77,
+      "Nama": "uqba",
+      "Rekanan": "Jamu Pahit, Pondok Ploso, Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 78,
+      "Nama": "yusuf",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 79,
+      "Nama": "pak kholil",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 80,
+      "Nama": "pak mujayun",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 81,
+      "Nama": "pak mahrus aly",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 82,
+      "Nama": "pak irwan",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 83,
+      "Nama": "pak hadziq",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 84,
+      "Nama": "pak ahib",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 85,
+      "Nama": "gus uun",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 86,
+      "Nama": "gus nawa",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 87,
+      "Nama": "gus zidney",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 88,
+      "Nama": "pak imam nawawi",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 89,
+      "Nama": "pak robert",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 90,
+      "Nama": "pak soleh",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak",
+      "Mark": false
+    },
+    {
+      "id": 91,
+      "Nama": "pak diya'",
+      "Rekanan": "Pondok PPTA",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 92,
+      "Nama": "gus adzim/ning una (sekalian)",
+      "Rekanan": "Pondok PPTA",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 93,
+      "Nama": "pak nurdin/mbak elsa (sekalian)",
+      "Rekanan": "Pondok PPTA",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 94,
+      "Nama": "pak sony/mbak atiq (sekalian)",
+      "Rekanan": "Pondok PPTA",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 95,
+      "Nama": "pak yusuf",
+      "Rekanan": "Pondok PPTA",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 96,
+      "Nama": "pak humaid/mbak katus (sekalian)",
+      "Rekanan": "Pondok PPTA",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 97,
+      "Nama": "nanda",
+      "Rekanan": "Pondok PPTA",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 98,
+      "Nama": "mbak nida/mas zaki (sekalian)",
+      "Rekanan": "Pondok PPTA",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 99,
+      "Nama": "feby/pak johan (sekalian)",
+      "Rekanan": "Pondok PPTA",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 100,
+      "Nama": "gus mamnun",
+      "Rekanan": "Pondok PPTA",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 101,
+      "Nama": "gus salam",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Pangestu",
+      "Mark": false
+    },
+    {
+      "id": 102,
+      "Nama": "abid",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 103,
+      "Nama": "bobi",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 104,
+      "Nama": "rizky",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 105,
+      "Nama": "aga",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 106,
+      "Nama": "andi",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 107,
+      "Nama": "berlian",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 108,
+      "Nama": "david",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 109,
+      "Nama": "gigih",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital",
+      "Mark": false
+    },
+    {
+      "id": 110,
+      "Nama": "johan",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 111,
+      "Nama": "koko",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 112,
+      "Nama": "lala",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 113,
+      "Nama": "lutfi",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 114,
+      "Nama": "mufid",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 115,
+      "Nama": "nailus",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 116,
+      "Nama": "nanta",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 117,
+      "Nama": "riyan",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 118,
+      "Nama": "rizal",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 119,
+      "Nama": "silvi",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 120,
+      "Nama": "titis",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 121,
+      "Nama": "vivi",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 122,
+      "Nama": "catur",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 123,
+      "Nama": "ilham",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 124,
+      "Nama": "mas zikin/rinjani (sekalian)",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 125,
+      "Nama": "arifin",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 126,
+      "Nama": "leli",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 127,
+      "Nama": "abil",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 128,
+      "Nama": "zahid",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 129,
+      "Nama": "pepe",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 130,
+      "Nama": "mas irsal/mbak nia (sekalian)",
+      "Rekanan": "Kuliah",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 131,
+      "Nama": "pak syafi' (kong)",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 132,
+      "Nama": "pak mansur",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 133,
+      "Nama": "fathur",
+      "Rekanan": "Jamu Pahit, Pondok Ploso",
+      "Jenis Undangan": "Cetak"
+    },
+    {
+      "id": 134,
+      "Nama": "Pengurus PP. Mambaul Maarif",
+      "Rekanan": "Pondok Jombang",
+      "Jenis Undangan": "Cetak"
+    },
+    {
+      "id": 135,
+      "Nama": "Pengurus PP. Tuhfatul Athfal",
+      "Rekanan": "Pondok PPTA",
+      "Jenis Undangan": "Cetak"
+    },
+    {
+      "id": 136,
+      "Nama": "Konco-konco jamu pahit",
+      "Rekanan": "Jamu Pahit",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 137,
+      "Nama": "nur aini",
+      "Rekanan": "Teman",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 138,
+      "Nama": "fatimah",
+      "Rekanan": "Teman",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 139,
+      "Nama": "adelia",
+      "Rekanan": "Teman",
+      "Jenis Undangan": "Digital"
+    },
+    {
+      "id": 140,
+      "Nama": "inun",
+      "Rekanan": "Teman, IKS",
+      "Jenis Undangan": "Cetak"
+    },
+    {
+      "id": 141,
+      "Nama": "gus atho",
+      "Rekanan": "Pondok PPTA, Pondok Ploso",
+      "Jenis Undangan": "Pangestu"
+    },
+    {
+      "id": 142,
+      "Nama": "gus author",
+      "Rekanan": "Pondok Ploso, Pondok PPTA",
+      "Jenis Undangan": "Pangestu"
+    },
+    {
+      "id": 143,
+      "Nama": "fadlul fikri",
+      "Rekanan": "Pondok Ploso, Pondok PPTA",
+      "Jenis Undangan": "Pangestu"
+    },
+    {
+      "id": 144,
+      "Nama": "lailatul fitria",
+      "Rekanan": "Pondok Ploso, Pondok PPTA",
+      "Jenis Undangan": "Pangestu"
+    },
+    {
+      "id": 145,
+      "Nama": "Teman-teman",
+      "Rekanan": "Teman-teman",
+      "Jenis Undangan": "Pangestu"
+    }
+  ]
+  
