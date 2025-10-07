@@ -1,0 +1,3029 @@
+<!DOCTYPE html>
+<html lang="id" class="notranslate" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta name="color-scheme" content="light only" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="google" content="notranslate" />
+    <meta name="robots" content="noindex" />
+    <title>Fikri &amp; Fitria</title>
+    <meta name="title" content="Fikri &amp; Fitria" />
+    <meta
+      name="description"
+      content="Tanpa Mengurangi Rasa Hormat. Kami Bermaksud Mengundang Bapak/Ibu/Saudara/i, Pada Acara Pernikahan Kami"
+    />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fikri &amp; Fitria" />
+    <meta
+      property="og:description"
+      content="Tanpa Mengurangi Rasa Hormat. Kami Bermaksud Mengundang Bapak/Ibu/Saudara/i, Pada Acara Pernikahan Kami"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./plugins/animate.css-main/animate.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/fill/style.css"
+    />
+
+    <link rel="preload" as="style" href="./css/bootstrap.css" />
+    <link rel="preload" as="style" href="./css/themes.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/themes.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url("./fonts/javassoul/Javassoul.css");
+      @import url("./fonts/laraboyok/Laraboyok-Regular.css");
+      @import url("./fonts/laraboyok/Laraboyok-Italic.css");
+
+      :root {
+        --inv-bg: #0d0c0c;
+        --inv-base: #ffffff;
+        --inv-accent: #bb9057;
+        --inv-border: #bb9057;
+        --font-base: "Work Sans", sans-serif;
+        --font-accent: "Laraboyok", serif;
+        --font-latin: "Javassoul", serif;
+        --menu-bg: #201c1c;
+        --menu-inactive: #bb9057;
+        --menu-active: #bb9057;
+        --btn-color: #201c1c;
+      }
+
+      .frame-out {
+        display: none;
+      }
+      .cover .frame-out {
+        display: block;
+      }
+      .editor-wrapper .cover .frame-out {
+        display: none;
+      }
+    </style>
+
+    <style>
+      @import url("./fonts/brittany_signature/BrittanySignature.css");
+      @import url("./fonts/photograph_signature/fonts.css");
+      @import url("./fonts/heatwood/Heatwood.css");
+      .font-brittany-signature {
+        font-family: "Brittany Signature";
+        line-height: 1.6 !important;
+      }
+      .font-photograph-signature {
+        font-family: "Photograph Signature";
+        line-height: 1.6 !important;
+      }
+      .font-heatwood {
+        font-family: "Heatwood";
+        line-height: 3 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="app">
+      <div
+        id="modalOverlay"
+        class="modal-backdrop fade"
+        style="display: none"
+      ></div>
+      <!-- Loader -->
+      <div id="loader" class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+      <!-- music -->
+      <audio id="music" loop autoplay>
+        <source
+          src="https://assets.satumomen.com/musics/kabagyan-sadewok-official-music-video-3hjpjtkscfu-00-02-13-00-04-20-part.mp3"
+        />
+      </audio>
+      <!-- end music -->
+      <div
+        id="workspace-container"
+        class="position-fixed h-100 w-100"
+        style="overflow: hidden"
+      >
+        <div
+          id="panZoom"
+          class="position-fixed h-100 w-100"
+          style="
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform-origin: 50% 50%;
+          "
+        >
+          <div
+            class="h-100 w-100 d-flex align-items-center justify-content-center"
+          >
+            <div class="canvas not-open">
+              <!-- invitation -->
+              <div id="satuMomen" data-guest="" data-group="">
+                <div class="satumomen_track">
+                  <ul class="satumomen_list">
+                    <li class="satumomen_slide satumomen_cover">
+                      <div
+                        class="container-mobile cover"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride.png"
+                            alt="frame"
+                            style="animation-delay: 1800ms"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom.png"
+                            alt="frame"
+                            style="animation-delay: 1800ms"
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="h-100 w-100 d-flex justify-content-center align-items-center"
+                        >
+                          <div
+                            class="position-relative h-100 w-100 flex-column d-flex justify-content-center align-items-center"
+                            style="padding-bottom: 30%"
+                          >
+                            <div
+                              class="text-center editable mb-4 animate__animated animate__fadeInDown animate__slower"
+                              style="font-size: 14.4px"
+                            >
+                              ✤ Undangan Manten ✤
+                            </div>
+                            <div
+                              class="pt-3 d-flex align-items-center justify-content-center mb-2 mx-auto animate__animated animate__zoomIn animate__slower"
+                              style="
+                                height: 112px;
+                                width: 60px;
+                                background-image: url(./themes/gallery.png);
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                background-position: center;
+                              "
+                            >
+                              <!-- <div
+                              class="editable text-left font-latin"
+                              style="
+                                font-size: 60px;
+                                line-height: 1;
+                                transform: translate(18px, -30px);
+                              "
+                            >
+                              F
+                            </div>
+                            <div
+                              class="editable text-left font-latin"
+                              style="
+                                font-size: 60px;
+                                line-height: 1;
+                                transform: translate(-2px, -10px);
+                              "
+                            >
+                            &amp;
+                            </div>
+                            <div
+                              class="editable text-right font-latin"
+                              style="
+                                font-size: 60px;
+                                line-height: 1;
+                                transform: translate(-8px, 32px);
+                              "
+                            >
+                              F
+                            </div> -->
+                            </div>
+                            <div
+                              class="w-100 d-flex align-items-center justify-content-center"
+                            >
+                              <div
+                                class="text-right animate__animated animate__fadeInLeft animate__slower"
+                                style="width: 40%; animation-delay: 1500ms"
+                              >
+                                <div
+                                  class="editable color-accent font-accent"
+                                  style="font-size: 40px; line-height: 1"
+                                >
+                                  Fikri
+                                </div>
+                                <div
+                                  class="editable"
+                                  style="font-size: 14.4px"
+                                ></div>
+                              </div>
+                              <div
+                                class="editable px-2 font-latin animate__animated animate__zoomIn animate__slower color-accent font-accent"
+                                style="font-size: 60px; animation-delay: 500ms"
+                              >
+                                &amp;
+                              </div>
+                              <div
+                                class="text-left animate__animated animate__fadeInRight animate__slower"
+                                style="width: 40%; animation-delay: 1500ms"
+                              >
+                                <div
+                                  class="editable color-accent font-accent"
+                                  style="line-height: 1; font-size: 40px"
+                                >
+                                  Fitria
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="text-center animate__animated animate__fadeInUp animate__slower editable"
+                              style="font-size: 14.4px"
+                            >
+                              12.11.2025
+                            </div>
+                            <div
+                              class="text-center mx-auto"
+                              style="max-width: 300px; margin-bottom: -110px"
+                            >
+                              <div
+                                class="text-center mb-3 p-2 animate__animated animate__zoomIn animate__slower"
+                              >
+                                <div
+                                  class="editable mb-1 animate__animated animate__fadeInUp animate__slower"
+                                  style="font-size: 14px"
+                                >
+                                  Kepada Yth;<br />Bapak/Ibu/Saudara/i
+                                </div>
+                                <div
+                                  id="guestNameSlot"
+                                  class="editable color-accent h5 font-weight-bold mb-1 animate__animated animate__fadeInUp animate__slower"
+                                  style="font-size: 16px"
+                                >
+                                  Nama Tamu
+                                </div>
+                              </div>
+                              <button
+                                class="btn-open-invitation btn btn-primary rounded-pill mb-4 animate__animated animate__fadeInUp animate__slow"
+                                style="font-size: 14px"
+                              >
+                                Open Invitation
+                              </button>
+                            </div>
+                          </div>
+                          <!-- <div class="w-100">
+                            <div
+                              class="image-editable mb-2 mx-auto animate__animated animate__fadeInDown animate__slower"
+                              style="
+                                height: 100px;
+                                width: 200px;
+                                overflow: hidden;
+                              "
+                            >
+                              <img
+                                src="./themes/raden/logo.webp"
+                                style="
+                                  width: 100%;
+                                  height: 100%;
+                                  object-fit: contain;
+                                "
+                                alt="logo.webp"
+                              />
+                            </div>
+                            <div
+                              class="text-center animate__animated animate__fadeInUp animate__slower mb-5"
+                              style="line-height: 1"
+                            >
+                              <div
+                                class="editable font-latin"
+                                style="font-size: 50px"
+                              >
+                                Fikri
+                              </div>
+                              <div
+                                class="editable font-latin"
+                                style="font-size: 50px"
+                              >
+                                &amp;
+                              </div>
+                              <div
+                                class="editable mb-2 font-latin"
+                                style="font-size: 50px"
+                              >
+                                Fitria
+                              </div>
+                              <div class="editable" style="font-size: 14.4px">
+                                12.11.25
+                              </div>
+                            </div>
+                            <div
+                              class="text-center mx-auto"
+                              style="max-width: 300px"
+                            >
+                              <div
+                                class="text-center mb-3 p-2 animate__animated animate__zoomIn animate__slower"
+                              >
+                                <div
+                                  class="editable mb-1 animate__animated animate__fadeInUp animate__slower"
+                                  style="font-size: 14px"
+                                >
+                                  Kepada Yth;<br />Bapak/Ibu/Saudara/i
+                                </div>
+                                <div
+                                  id="guestNameSlot"
+                                  class="editable color-accent h5 font-weight-bold mb-1 animate__animated animate__fadeInUp animate__slower"
+                                  style="font-size: 16px"
+                                >
+                                  Nama Tamu
+                                </div>
+                              </div>
+                              <button
+                                class="btn-open-invitation btn btn-primary rounded-pill mb-4 animate__animated animate__fadeInUp animate__slow"
+                                style="font-size: 14px"
+                              >
+                                Open Invitation
+                              </button>
+                            </div>
+                          </div> -->
+                        </div>
+                      </div>
+                    </li>
+                    <!-- <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="
+                          background-image: url(./themes/raden/bg.webp);
+                        "
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl-2.webp"
+                            alt="frame"
+                            style="animation-delay: 1800ms"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br-2.webp"
+                            alt="frame"
+                            style="animation-delay: 1800ms"
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="position-relative h-100 w-100 flex-column d-flex justify-content-center align-items-center"
+                          style="padding-bottom: 30%"
+                        >
+                          <div
+                            class="text-center editable mb-4 animate__animated animate__fadeInDown animate__slower"
+                            style="font-size: 14.4px"
+                          >
+                            ✤ Undangan Manten ✤
+                          </div>
+                          <div
+                            class="pt-3 d-flex align-items-center justify-content-center mb-2 mx-auto animate__animated animate__zoomIn animate__slower"
+                            style="
+                              height: 112px;
+                              width: 60px;
+                              background-image: url(./themes/gallery.png);
+                              background-repeat: no-repeat;
+                              background-size: contain;
+                              background-position: center;
+                            "
+                          >
+                            <div
+                              class="editable text-left font-latin"
+                              style="
+                                font-size: 60px;
+                                line-height: 1;
+                                transform: translate(2px, 9px);
+                              "
+                            >
+                              F
+                            </div>
+                            <div
+                              class="editable text-right font-latin"
+                              style="
+                                font-size: 60px;
+                                line-height: 1;
+                                transform: translate(-8px, 33px);
+                              "
+                            >
+                              F
+                            </div>
+                          </div>
+                          <div
+                            class="w-100 d-flex align-items-center justify-content-center"
+                          >
+                            <div
+                              class="text-right animate__animated animate__fadeInLeft animate__slower"
+                              style="width: 40%; animation-delay: 1500ms"
+                            >
+                              <div
+                                class="editable color-accent font-accent"
+                                style="font-size: 40px; line-height: 1"
+                              >
+                                Fikri
+                              </div>
+                              <div
+                                class="editable"
+                                style="font-size: 14.4px"
+                              ></div>
+                            </div>
+                            <div
+                              class="editable px-2 font-latin animate__animated animate__zoomIn animate__slower"
+                              style="font-size: 60px; animation-delay: 500ms"
+                            >
+                              &amp;
+                            </div>
+                            <div
+                              class="text-left animate__animated animate__fadeInRight animate__slower"
+                              style="width: 40%; animation-delay: 1500ms"
+                            >
+                              <div
+                                class="editable color-accent font-accent"
+                                style="line-height: 1; font-size: 40px"
+                              >
+                                Fitria
+                              </div>
+                              <div
+                                class="editable"
+                                style="font-size: 14.4px"
+                              ></div>
+                            </div>
+                          </div>
+                          <div
+                            class="image-editable mx-auto animate__animated animate__fadeInUp animate__slower"
+                            style="
+                              height: auto;
+                              width: 230px;
+                              overflow: hidden;
+                              position: absolute;
+                              bottom: -30px;
+                            "
+                          >
+                            <img
+                              src="./themes/gallery2.png"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                              alt="301467-gallery-rNpYuhv9jd.png"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </li> -->
+                    <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride-full.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              left: 125px;
+                              width: 70px;
+                              bottom: -20px;
+                            "
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom-full.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              right: 125px;
+                              width: 70px;
+                              bottom: -20px;
+                            "
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="d-flex justify-content-center align-items-center"
+                          style="height: 100%"
+                        >
+                          <div style="width: 100%">
+                            <div
+                              class="text-center animate__animated animate__fadeInUp animate__slower"
+                            >
+                              <div
+                                class="editable quotes mb-3"
+                                style="font-size: 14.4px"
+                              >
+                                Pernikahan bukan soal 1-2 hari saja tapi buat
+                                1×seumur hidup jadi menikahlah dengan yang bisa
+                                mencintai kita apa adanya dan umur bukanlah hal
+                                yang penting dan hambatan buat menikah selagi
+                                belum restu keluarga kenapa tidak<br />
+                              </div>
+                              <div
+                                class="editable font-italic"
+                                style="font-size: 14.4px"
+                              >
+                                Fikri &amp; Fitria
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            style="bottom: 0px; left: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            style="bottom: 0px; right: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              left: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              right: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="d-flex flex-olumn justify-content-center align-items-center"
+                          style="height: 100%"
+                        >
+                          <div class="text-center">
+                            <div
+                              class="editable mb-4 animate__animated animate__fadeInDown animate__slower"
+                              style="font-size: 14.4px"
+                            >
+                              ✤ Bismillah ✤
+                            </div>
+                            <div
+                              class="color-accent editable quotes mb-3 animate__animated animate__zoomIn animate__slower"
+                              style="font-size: 30px"
+                            >
+                              بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+                            </div>
+                            <div
+                              class="editable quotes mb-3 animate__animated animate__fadeInUp animate__slower"
+                              style="font-size: 13px"
+                            >
+                              Maha suci Allah yang menciptakan makhluk-<br />Nya
+                              berpasang-pasangan.
+                            </div>
+                            <div
+                              class="editable quotes animate__animated animate__fadeInUp animate__slower"
+                              style="font-size: 13px"
+                            >
+                              Ya Allah perkenankanlah kami merangkaikan kasih<br />sayang
+                              yang kau ciptakan diantara kami untuk<br />mengikuti
+                              Sunnah Rasul-Mu dalam rangka<br />membentuk
+                              keluarga yang sakinah, mawaddah,<br />warahmah
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            style="bottom: 0px; left: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            style="bottom: 0px; right: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              left: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              right: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="d-flex justify-content-center flex-column align-items-center"
+                          style="height: 100%"
+                        >
+                          <div
+                            class="text-center animate__animated animate__fadeInDown animate__slower"
+                          >
+                            <div class="editable" style="font-size: 14.4px">
+                              ✤ Mempelai Pria ✤
+                            </div>
+                          </div>
+                          <div
+                            class="image-editable mx-auto animate__animated animate__fadeInDown animate__slower"
+                            style="height: 80px; width: 200px; overflow: hidden"
+                          >
+                            <img
+                              src="./themes/raden/logo.webp"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                              alt="logo.webp"
+                            />
+                          </div>
+                          <div
+                            class="text-center animate__animated animate__fadeInUp animate__slower"
+                          >
+                            <div
+                              class="editable font-accent"
+                              style="font-size: 40px; line-height: 1"
+                            >
+                              Fadlul Fikri
+                            </div>
+                          </div>
+                          <div
+                            class="mt-3 text-center animate__animated animate__fadeInUp animate__slower"
+                          >
+                            <div
+                              class="editable color-accent"
+                              style="font-size: 14px"
+                            >
+                              Putra kedua dari keluarga
+                            </div>
+
+                            <div class="editable" style="font-size: 14px">
+                              Bapak Moh.Khoiri<br />Dan Ibu Lilik Rohmatin<br />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            style="bottom: 0px; left: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            style="bottom: 0px; right: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              left: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              right: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="d-flex justify-content-center flex-column align-items-center"
+                          style="height: 100%"
+                        >
+                          <div
+                            class="text-center animate__animated animate__fadeInDown animate__slower"
+                          >
+                            <div class="editable" style="font-size: 14.4px">
+                              ✤ Mempelai Wanita ✤
+                            </div>
+                          </div>
+                          <div
+                            class="image-editable mx-auto animate__animated animate__fadeInDown animate__slower"
+                            style="height: 80px; width: 200px; overflow: hidden"
+                          >
+                            <img
+                              src="./themes/raden/logo.webp"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                              alt="logo.webp"
+                            />
+                          </div>
+                          <div
+                            class="text-center animate__animated animate__fadeInUp animate__slower"
+                          >
+                            <div
+                              class="editable font-accent"
+                              style="font-size: 30px; line-height: 1"
+                            >
+                              Lailatul Fitria
+                            </div>
+                          </div>
+                          <div
+                            class="mt-3 text-center animate__animated animate__fadeInUp animate__slower"
+                          >
+                            <div
+                              class="editable color-accent"
+                              style="font-size: 14px"
+                            >
+                              Putri ketiga dari keluarga
+                            </div>
+
+                            <div class="editable" style="font-size: 14px">
+                              Bapak Jamaludin<br />Dan Ibu Sri Handayani<br />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            style="bottom: 0px; left: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            style="bottom: 0px; right: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              left: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              right: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="d-flex flex-column justify-content-center align-items-center"
+                          style="height: 100%"
+                        >
+                          <div
+                            class="editable text-center font-latin color-accent h4 mb-4 animate__animated animate__fadeInDown animate__slower"
+                            style="font-size: 28.8px; margin-top: -80px"
+                          >
+                            Our Love Story
+                          </div>
+                          <div>
+                            <div
+                              class="text-left pl-3 mb-3 animate__animated animate__fadeInUp animate__slower"
+                              style="position: relative"
+                            >
+                              <div
+                                class="editable font-weight-bold mb-2"
+                                style="font-size: 14.4px"
+                              ></div>
+                              <div
+                                class="editable quotes"
+                                style="font-size: 13px"
+                              >
+                                Saling knl lama tapi cuma sebatas tetangga
+                                ternyata jodoh gak ada yang tau mau sejauh
+                                apapun pergi kalo memang jodoh gak akan kemana
+                                gak ada kesan istimewa atau peristiwa manis tapi
+                                tentang pembuktian pacaran belum genap 1 bulan
+                                menghadap orang tua dengan membawa niat yang
+                                serius diterima baik ke dua keluarga and tepat
+                                di tanggal 13 september 2025 memutuskan buat
+                                lamaran dan kalo kata orang ujian menuju
+                                pernikahan adalah paling sulit dan benar adanya
+                                dan Alhamdulillahnya kita bisa sampek ke titik
+                                dimana pernikahan itu akan berlangsung pada
+                                tanggal 02 oktober 2025
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li> -->
+                    <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            style="bottom: 0px; left: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            style="bottom: 0px; right: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 60px;
+                              bottom: -40px;
+                              left: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 60px;
+                              bottom: -40px;
+                              right: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="d-flex justify-content-center flex-column align-items-center"
+                          style="height: 100%"
+                        >
+                          <!-- <div
+                            class="mb-4 text-center animate__animated animate__fadeInDown animate__slower"
+                          >
+                            <div class="editable" style="font-size: 14.4px">
+                              ✤ Undangan Manten ✤
+                            </div>
+                          </div> -->
+                          <div
+                            class="mb-3 image-editable mx-auto animate__animated animate__fadeInDown animate__slower"
+                            style="height: auto; width: 130px; overflow: hidden"
+                          >
+                            <img
+                              src="https://assets.satumomen.com/images/galleries/301467-gallery-WG4gvfspKV.png"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                              alt="301467-gallery-WG4gvfspKV.png"
+                            />
+                          </div>
+                          <div
+                            class="text-center animate__animated animate__fadeInDown animate__slower"
+                          >
+                            <div
+                              class="editable color-accent font-weight-bold"
+                              style="font-size: 14px"
+                            >
+                              ✤ Akad Pernikahan ✤
+                            </div>
+
+                            <div class="editable" style="font-size: 14px">
+                              Pukul 09.30 WIB<br />
+                            </div>
+                          </div>
+                          <div
+                            class="mt-3 text-center animate__animated animate__zoomIn animate__slower"
+                          >
+                            <div
+                              class="editable font-latin"
+                              style="font-size: 50px; line-height: 1.2"
+                            >
+                              Rabu Pon
+                            </div>
+                            <div
+                              class="editable color-accent font-accent"
+                              style="font-size: 50px; line-height: 1.2"
+                            >
+                              12.11.25
+                            </div>
+                          </div>
+                          <div
+                            class="mt-2 text-center animate__animated animate__zoomIn animate__slower"
+                          >
+                            <div
+                              class="editable color-accent font-weight-bold"
+                              style="font-size: 14px"
+                            >
+                              ✤ Kediaman Wanita ✤
+                            </div>
+
+                            <div class="editable" style="font-size: 14px">
+                              Jl.Bakah, RT.08, RW.01, Ds. Bakah,<br />
+                              Kec. Kundurun - Blora, Jawa Tengah
+                            </div>
+                          </div>
+                          <div
+                            class="mt-3 image-editable mx-auto animate__animated animate__fadeInUp animate__slower"
+                            style="height: auto; width: 130px; overflow: hidden"
+                          >
+                            <img
+                              src="https://assets.satumomen.com/images/galleries/301467-gallery-FMgCPTNp2h.png"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                              alt="301467-gallery-FMgCPTNp2h.png"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            style="bottom: 0px; left: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            style="bottom: 0px; right: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 60px;
+                              bottom: -40px;
+                              left: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 60px;
+                              bottom: -40px;
+                              right: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="d-flex justify-content-center flex-column align-items-center"
+                          style="height: 100%"
+                        >
+                          <!-- <div
+                            class="mb-4 text-center animate__animated animate__fadeInDown animate__slower"
+                          >
+                            <div class="editable" style="font-size: 14.4px">
+                              ✤ Undangan Manten ✤
+                            </div>
+                          </div> -->
+                          <div
+                            class="mb-3 image-editable mx-auto animate__animated animate__fadeInDown animate__slower"
+                            style="height: auto; width: 130px; overflow: hidden"
+                          >
+                            <img
+                              src="https://assets.satumomen.com/images/galleries/301467-gallery-WG4gvfspKV.png"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                              alt="301467-gallery-WG4gvfspKV.png"
+                            />
+                          </div>
+                          <div
+                            class="text-center animate__animated animate__fadeInDown animate__slower"
+                          >
+                            <div
+                              class="editable color-accent font-weight-bold"
+                              style="font-size: 14px"
+                            >
+                              ✤ Resepsi ✤
+                            </div>
+
+                            <div class="editable" style="font-size: 14px">
+                              Pukul 13.00 WIB<br />
+                            </div>
+                          </div>
+                          <div
+                            class="mt-3 text-center animate__animated animate__zoomIn animate__slower"
+                          >
+                            <div
+                              class="editable font-latin"
+                              style="font-size: 50px; line-height: 1.2"
+                            >
+                              Rabu Pon
+                            </div>
+                            <div
+                              class="editable color-accent font-accent"
+                              style="font-size: 50px; line-height: 1.2"
+                            >
+                              12.11.25
+                            </div>
+                          </div>
+                          <div
+                            class="mt-2 text-center animate__animated animate__zoomIn animate__slower"
+                          >
+                            <div
+                              class="editable color-accent font-weight-bold"
+                              style="font-size: 14px"
+                            >
+                              ✤ Kediaman Wanita ✤
+                            </div>
+
+                            <div class="editable" style="font-size: 14px">
+                              Jl.Bakah, RT.08, RW.01, Ds. Bakah,<br />
+                              Kec. Kundurun - Blora, Jawa Tengah
+                            </div>
+                          </div>
+                          <div
+                            class="mt-3 image-editable mx-auto animate__animated animate__fadeInUp animate__slower"
+                            style="height: auto; width: 130px; overflow: hidden"
+                          >
+                            <img
+                              src="https://assets.satumomen.com/images/galleries/301467-gallery-FMgCPTNp2h.png"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                              alt="301467-gallery-FMgCPTNp2h.png"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            style="bottom: 0px; left: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            style="bottom: 0px; right: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 60px;
+                              bottom: -40px;
+                              left: 45px;
+                            "
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 60px;
+                              bottom: -40px;
+                              right: 45px;
+                            "
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="d-flex justify-content-center align-items-center"
+                          style="height: 100%"
+                        >
+                          <div style="width: 100%">
+                            <div
+                              class="editable text-center color-accent mb-3 animate__animated animate__fadeInDown animate__slow font-italic"
+                              style="font-size: 42px"
+                            >
+                              Maps
+                            </div>
+                            <div>
+                              <div
+                                class="p-1 mb-3 animate__animated animate__flipInX animate__slower"
+                                style="
+                                  border-radius: 2.5rem;
+                                  overflow: hidden;
+                                  position: relative;
+                                  border: 4px solid var(--inv-base);
+                                "
+                              >
+                                <div
+                                  class="image-editable animate__animated animate__fadeInDown animate__slow"
+                                  style="
+                                    width: 100%;
+                                    margin: auto;
+                                    border-radius: 2rem;
+                                    overflow: hidden;
+                                    position: relative;
+                                    border: 2px solid var(--inv-base);
+                                  "
+                                >
+                                  <!-- <img
+                                    src="https://assets.satumomen.com/images/galleries/688781-gallery-BTAOREBd1s.png"
+                                    class="w-100 h-100"
+                                    style="
+                                      position: absolute;
+                                      object-fit: cover;
+                                    "
+                                    alt="no-image.jpg"
+                                  /> -->
+                                  <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3959.478180203216!2d111.24233287499798!3d-7.070423992932264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDQnMTMuNSJTIDExMcKwMTQnNDEuNyJF!5e0!3m2!1sen!2sid!4v1759868422394!5m2!1sen!2sid"
+                                    width="335"
+                                    height="240"
+                                    style="border: 0"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                  ></iframe>
+                                </div>
+                              </div>
+                              <div
+                                class="text-center animate__animated animate__fadeInUp animate__slow"
+                              >
+                                <div
+                                  class="editable color-accent font-weight-bold"
+                                  style="font-size: 18px"
+                                >
+                                  Jl.Bakah, RT.08, RW.01, Ds. Bakah,<br />
+                                  Kec. Kundurun - Blora, Jawa Tengah
+                                </div>
+                                <div
+                                  class="editable mb-3"
+                                  style="font-size: 10px"
+                                ></div>
+                                <a
+                                  href="https://maps.app.goo.gl/9JgU5m6fCAu6a9mK6"
+                                  target="_blank"
+                                  rel="nofollow noreferrer noopener"
+                                  class="link btn btn-primary rounded-pill animate__animated animate__fadeInUp animate__slow"
+                                  >Petunjuk Ke Lokasi</a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            style="bottom: 0px; left: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            style="bottom: 0px; right: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              left: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              right: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="px-3 d-flex justify-content-center align-items-center"
+                          style="height: 100%"
+                        >
+                          <div style="width: 100%">
+                            <div
+                              class="mb-3 image-editable mx-auto animate__animated animate__fadeInDown animate__slower"
+                              style="
+                                height: auto;
+                                width: 130px;
+                                overflow: hidden;
+                              "
+                            >
+                              <img
+                                src="https://assets.satumomen.com/images/galleries/301467-gallery-WG4gvfspKV.png"
+                                style="
+                                  width: 100%;
+                                  height: 100%;
+                                  object-fit: contain;
+                                "
+                                alt="301467-gallery-WG4gvfspKV.png"
+                              />
+                            </div>
+                            <div class="text-center">
+                              <div
+                                class="editable color-accent h4 mb-4 animate__animated animate__fadeInDown animate__slower font-latin"
+                                style="font-size: 40px"
+                              >
+                                Do'a Untuk Pengantin
+                              </div>
+                              <div
+                                class="editable mb-4 animate__animated animate__fadeInUp animate__slower"
+                                style="font-size: 14.4px"
+                              >
+                                "Semoga Allah memberkahimu di waktu bahagia dan
+                                memberkahimu di waktu susah, dan mengumpulkan
+                                kalian berdua dalam kebaikan"<br /><br />[HR.
+                                Abu Daud]
+                              </div>
+
+                              <!-- <div
+                                class="editable mb-4 animate__animated animate__fadeInUp animate__slower"
+                              >
+                                Tekan tombol dibawah ini untuk mengirim ucapan
+                                dan konfirmasi kehadiran
+                              </div>
+                              <button
+                                class="btn-rsvp btn btn-primary rounded-pill mb-4 animate__animated animate__fadeInUp animate__slow"
+                              >
+                                Konfirmasi &amp; Kirim Ucapan
+                              </button> -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            style="bottom: 0px; left: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            style="bottom: 0px; right: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              left: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              right: 75px;
+                            "
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="h-100 d-flex justify-content-center align-items-center"
+                        >
+                          <div class="w-100 text-center">
+                            <div
+                              class="font-latin color-accent h4 mb-2 editable animate__animated animate__fadeInDown animate__slower"
+                              style="font-size: 28.8px"
+                            >
+                              Tanda Kasih
+                            </div>
+                            <div
+                              class="editable mb-4 animate__animated animate__fadeInDown animate__slower"
+                              style="font-size: 12px"
+                            >
+                              Terima kasih telah menambah semangat kegembiraan
+                              pernikahan kami dengan kehadiran dan hadiah indah
+                              Anda.
+                            </div>
+                            <!-- <div
+                              class="mt-3 p-4 rounded"
+                              style="border: 1px solid var(--inv-border)"
+                            >
+                              <div
+                                class="d-flex animate__animated animate__zoomIn animate__slow"
+                              >
+                                <div class="mx-auto">
+                                  <div class="d-flex align-items-center mb-3">
+                                    <div
+                                      style="
+                                        width: 80px;
+                                        height: 50px;
+                                        overflow: hidden;
+                                      "
+                                      class="image-editable bg-white rounded"
+                                    >
+                                      <img
+                                        src="https://assets.satumomen.com/assets/logo-bca-biru-1687975058.png"
+                                        style="
+                                          width: 100%;
+                                          height: 100%;
+                                          object-fit: contain;
+                                        "
+                                        alt="no-image.jpg"
+                                      />
+                                    </div>
+
+                                    <div class="text-left pl-2">
+                                      <div
+                                        class="editable account-number font-weight-bold h5 mb-0"
+                                        style="font-size: 18px"
+                                      >
+                                        7955392981
+                                      </div>
+                                      <div
+                                        class="editable"
+                                        style="font-size: 12px"
+                                      >
+                                        Azizah Fitria Ayu Diah Pratiwi Lujeng<br />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="d-flex align-items-center">
+                                    <div
+                                      style="
+                                        width: 80px;
+                                        height: 50px;
+                                        overflow: hidden;
+                                      "
+                                      class="image-editable bg-white rounded"
+                                    >
+                                      <img
+                                        src="https://assets.satumomen.com/assets/logo-bri-1688609239.jpg"
+                                        style="
+                                          width: 100%;
+                                          height: 100%;
+                                          object-fit: contain;
+                                        "
+                                        alt="no-image.jpg"
+                                      />
+                                    </div>
+                                    <div class="text-left pl-2">
+                                      <div
+                                        class="editable account-number font-weight-bold h5 mb-0"
+                                        style="font-size: 18px"
+                                      >
+                                        7760 0101 3257 530
+                                      </div>
+                                      <div
+                                        class="editable"
+                                        style="font-size: 12px"
+                                      >
+                                        Azizah Fitria Ayu Diah Pratiwi Lujeng<br />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> -->
+                            <div
+                              class="mt-3 p-4 rounded"
+                              style="border: 1px solid var(--inv-border)"
+                            >
+                              <div
+                                class="text-center mb-2 animate__animated animate__zoomIn animate__slow"
+                              >
+                                <div
+                                  class="editable font-weight-bold h5 color-accent mb-2"
+                                >
+                                  Kirim Kado
+                                </div>
+                                <div
+                                  class="editable copy-address mb-0"
+                                  style="font-size: 12px"
+                                >
+                                  Anda dapat mengirim kado ke:<br />
+                                  Jl.Bakah, RT.08, RW.01, Ds. Bakah,<br />
+                                  Kec. Kundurun - Blora, Jawa Tengah
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="satumomen_slide">
+                      <div
+                        class="container-mobile"
+                        style="background-image: url(./themes/raden/bg.webp)"
+                      >
+                        <div class="frame">
+                          <img
+                            class="frame-tl w-100 h-100 animate__animated animate__fadeIn animate__slower"
+                            src="./themes/raden/border.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl w-100 animate__animated animate__fadeInUp animate__slower"
+                            src="./themes/raden/bm.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl h-100 animate__animated animate__fadeInLeft animate__slower"
+                            src="./themes/raden/left.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-br h-100 animate__animated animate__fadeInRight animate__slower"
+                            src="./themes/raden/right.webp"
+                            alt="frame"
+                            style="width: auto"
+                          />
+                          <img
+                            class="frame-tl animate__animated animate__fadeInTopLeft animate__slower"
+                            src="./themes/raden/tl.webp"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-tr animate__animated animate__fadeInTopRight animate__slower"
+                            src="./themes/raden/tr.webp"
+                            alt="frame"
+                          />
+
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bl.webp"
+                            style="bottom: 0px; left: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/br.webp"
+                            style="bottom: 0px; right: -56px"
+                            alt="frame"
+                          />
+                          <img
+                            class="frame-bl animate__animated animate__fadeInBottomLeft animate__slower"
+                            src="./themes/raden/bride-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              left: 50px;
+                            "
+                          />
+                          <img
+                            class="frame-br animate__animated animate__fadeInBottomRight animate__slower"
+                            src="./themes/raden/groom-full-coklat.png"
+                            alt="frame"
+                            style="
+                              animation-delay: 1800ms;
+                              width: 70px;
+                              bottom: -20px;
+                              right: 50px;
+                            "
+                          />
+                          <img
+                            class="frame-tr h-100 frame-out animate__animated animate__slideOutLeft animate__slower"
+                            src="./themes/raden/cover-left.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              right: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                          <img
+                            class="frame-tl h-100 frame-out animate__animated animate__slideOutRight animate__slower"
+                            src="./themes/raden/cover-right.webp"
+                            alt="frame"
+                            style="
+                              width: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              z-index: 2;
+                              animation-delay: 800ms;
+                            "
+                          />
+                        </div>
+                        <div
+                          class="px-3 watermark d-flex flex-column justify-content-center align-items-center h-100 w-100"
+                        >
+                          <div
+                            class="mb-4 text-center animate__animated animate__fadeInDown animate__slower"
+                          >
+                            <div class="editable" style="font-size: 14.4px">
+                              ✤ Penutup ✤
+                            </div>
+                          </div>
+                          <div
+                            class="mb-3 image-editable mx-auto animate__animated animate__fadeInDown animate__slower"
+                            style="height: auto; width: 130px; overflow: hidden"
+                          >
+                            <img
+                              src="https://assets.satumomen.com/images/galleries/301467-gallery-WG4gvfspKV.png"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                              alt="301467-gallery-WG4gvfspKV.png"
+                            />
+                          </div>
+                          <div class="text-center">
+                            <div
+                              class="color-accent editable animate__animated animate__fadeInDown animate__slower font-weight-bold"
+                              style="font-size: 14px"
+                            >
+                              ✤ Matur Nuwun ✤
+                            </div>
+                            <div
+                              class="editable mb-2 animate__animated animate__zoomIn animate__slower"
+                              style="font-size: 14px"
+                            >
+                              Matur nuwun sampun agungaken, kalihinan
+                              panjenengan dhateng panggonan kami, semoga kanthi
+                              rahayu lan sregep tanpa rintangan, inggih punika
+                              waktu mugi-mugi ngrangsang suka.
+                            </div>
+                          </div>
+                          <!-- <div
+                            class="mt-3 image-editable mx-auto animate__animated animate__fadeInUp animate__slower"
+                            style="height: auto; width: 130px; overflow: hidden"
+                          >
+                            <img
+                              src="https://assets.satumomen.com/images/galleries/301467-gallery-FMgCPTNp2h.png"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                              alt="301467-gallery-FMgCPTNp2h.png"
+                            />
+                          </div> -->
+                          <div class="watermark-placeholder text-center"></div>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- Ads for free version -->
+                    <!-- end Ads for free version -->
+                  </ul>
+                </div>
+              </div>
+              <div id="smMenu" class="satumomen_menu">
+                <ul class="satumomen_menu_list">
+                  <li class="satumomen_menu_item">
+                    <i
+                      class="icon ph-fill ph-envelope-open"
+                      style="color: currentColor"
+                    ></i>
+                    <span>Opening</span>
+                  </li>
+                  <!-- <li class="satumomen_menu_item">
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity=".4"
+                        d="M16.191 2H7.81C4.77 2 3 3.78 3 6.83v10.33C3 20.26 4.77 22 7.81 22h8.381C19.28 22 21 20.26 21 17.16V6.83C21 3.78 19.28 2 16.191 2"
+                        fill="currentColor"
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.08 6.65v.01a.78.78 0 0 0 0 1.56h2.989c.431 0 .781-.35.781-.791a.781.781 0 0 0-.781-.779H8.08Zm7.84 6.09H8.08a.78.78 0 0 1 0-1.561h7.84a.781.781 0 0 1 0 1.561Zm0 4.57H8.08c-.3.04-.59-.11-.75-.36a.795.795 0 0 1 .75-1.21h7.84c.399.04.7.38.7.79 0 .399-.301.74-.7.78Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                    <span>Profil</span>
+                  </li> -->
+                  <li class="satumomen_menu_item">
+                    <i
+                      class="icon ph-fill ph-quotes"
+                      style="color: currentColor"
+                    ></i>
+                    <span>Quotes</span>
+                  </li>
+                  <li class="satumomen_menu_item">
+                    <i
+                      class="icon ph-fill ph-hand-waving"
+                      style="color: currentColor"
+                    ></i>
+                    <span>Salam</span>
+                  </li>
+                  <li class="satumomen_menu_item">
+                    <i
+                      class="icon ph-fill ph-gender-male"
+                      style="color: currentColor"
+                    ></i>
+                    <span>Groom</span>
+                  </li>
+                  <li class="satumomen_menu_item">
+                    <i
+                      class="icon ph-fill ph-gender-female"
+                      style="color: currentColor"
+                    ></i>
+                    <span>Bride</span>
+                  </li>
+                  <!-- <li class="satumomen_menu_item"> -->
+                  <!-- <svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity=".4"
+                        d="M16.191 2H7.81C4.77 2 3 3.78 3 6.83v10.33C3 20.26 4.77 22 7.81 22h8.381C19.28 22 21 20.26 21 17.16V6.83C21 3.78 19.28 2 16.191 2"
+                        fill="currentColor"
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.08 6.65v.01a.78.78 0 0 0 0 1.56h2.989c.431 0 .781-.35.781-.791a.781.781 0 0 0-.781-.779H8.08Zm7.84 6.09H8.08a.78.78 0 0 1 0-1.561h7.84a.781.781 0 0 1 0 1.561Zm0 4.57H8.08c-.3.04-.59-.11-.75-.36a.795.795 0 0 1 .75-1.21h7.84c.399.04.7.38.7.79 0 .399-.301.74-.7.78Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg> -->
+                  <!-- <span>Love Story</span>
+                  </li> -->
+                  <li class="satumomen_menu_item">
+                    <i
+                      class="icon ph-fill ph-calendar"
+                      style="color: currentColor"
+                    ></i>
+                    <span>Akad</span>
+                  </li>
+                  <li class="satumomen_menu_item">
+                    <i
+                      class="icon ph-fill ph-fork-knife"
+                      style="color: currentColor"
+                    ></i>
+                    <span>Resepsi</span>
+                  </li>
+                  <li class="satumomen_menu_item">
+                    <i
+                      class="icon ph-fill ph-map-trifold"
+                      style="color: currentColor"
+                    ></i>
+                    <span>Maps</span>
+                  </li>
+                  <li class="satumomen_menu_item">
+                    <i
+                      class="icon ph-fill ph-hands-praying"
+                      style="color: currentColor"
+                    ></i>
+                    <span>Doa</span>
+                  </li>
+                  <li class="satumomen_menu_item">
+                    <i
+                      class="icon ph-fill ph-gift"
+                      style="color: currentColor"
+                    ></i>
+                    <span>Gift</span>
+                  </li>
+                  <li class="satumomen_menu_item">
+                    <i
+                      class="icon ph-fill ph-hand-heart"
+                      style="color: currentColor"
+                    ></i>
+                    <span>Thanks</span>
+                  </li>
+                  <!-- Ads for free version -->
+                  <!-- end Ads for free version -->
+                </ul>
+              </div>
+              <!-- end invitation -->
+              <div class="floating-action d-flex align-items-end flex-column">
+                <button
+                  id="btnMusic"
+                  onclick="playMusic()"
+                  class="btn btn-float"
+                >
+                  <svg
+                    class="play"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M184,152V104a8,8,0,0,1,16,0v48a8,8,0,0,1-16,0Zm40-72a8,8,0,0,0-8,8v80a8,8,0,0,0,16,0V88A8,8,0,0,0,224,80ZM53.92,34.62A8,8,0,1,0,42.08,45.38L73.55,80H32A16,16,0,0,0,16,96v64a16,16,0,0,0,16,16H77.25l69.84,54.31A8,8,0,0,0,160,224V175.09l42.08,46.29a8,8,0,1,0,11.84-10.76Zm92.16,77.59A8,8,0,0,0,160,106.83V32a8,8,0,0,0-12.91-6.31l-39.85,31a8,8,0,0,0-1,11.7Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="pause"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M160,32V224a8,8,0,0,1-12.91,6.31L77.25,176H32a16,16,0,0,1-16-16V96A16,16,0,0,1,32,80H77.25l69.84-54.31A8,8,0,0,1,160,32Zm32,64a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0V104A8,8,0,0,0,192,96Zm32-16a8,8,0,0,0-8,8v80a8,8,0,0,0,16,0V88A8,8,0,0,0,224,80Z"
+                    ></path>
+                  </svg>
+                </button>
+                <button id="btnAutoplay" class="btn btn-float">
+                  <svg
+                    class="play"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.13,104.13,0,0,0,128,24Zm36.44,110.66-48,32A8.05,8.05,0,0,1,112,168a8,8,0,0,1-8-8V96a8,8,0,0,1,12.44-6.66l48,32a8,8,0,0,1,0,13.32Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="pause"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.13,104.13,0,0,0,128,24ZM112,160a8,8,0,0,1-16,0V96a8,8,0,0,1,16,0Zm48,0a8,8,0,0,1-16,0V96a8,8,0,0,1,16,0Z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- lightbox -->
+      <div id="lightboxWrapper" class="lightbox-wrapper">
+        <div class="lightbox-list"></div>
+        <a href="#" id="lightboxCloseBtn" class="btn-lightbox">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            width="24"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 0 1 1.414 0L10 8.586l4.293-4.293a1 1 0 1 1 1.414 1.414L11.414 10l4.293 4.293a1 1 0 0 1-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 0 1-1.414-1.414L8.586 10 4.293 5.707a1 1 0 0 1 0-1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <div class="lightbox-navigation">
+          <a
+            href="#"
+            id="lightboxPrevBtn"
+            class="lightbox-arrow"
+            data-index="0"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              width="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m15 19-7-7 7-7"
+              />
+            </svg>
+          </a>
+          <a
+            href="#"
+            id="lightboxNextBtn"
+            class="lightbox-arrow"
+            data-index="0"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              width="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m9 5 7 7-7 7"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!-- end lightbox -->
+      <!-- startQRModal -->
+      <div
+        class="modal fade"
+        id="qrModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="qrModal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="height: 100%">
+            <div
+              style="
+                width: 100%;
+                aspect-ratio: 16/9;
+                background-size: cover;
+                background-position: center;
+                background-image: url(https://assets.satumomen.com/images/invitation/cover-6887811758800226.png);
+              "
+            ></div>
+            <div class="text-center py-4 px-4">
+              <div>
+                <div class="mx-auto">
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    width="180"
+                    height="180"
+                    viewBox="0 0 180 180"
+                  >
+                    <rect x="0" y="0" width="180" height="180" fill="#ffffff" />
+                    <g transform="scale(7.2)">
+                      <g transform="translate(0,0)">
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 0L8 1L9 1L9 2L10 2L10 3L11 3L11 1L13 1L13 0L11 0L11 1L9 1L9 0ZM14 0L14 1L15 1L15 0ZM16 0L16 1L17 1L17 0ZM12 2L12 4L11 4L11 5L10 5L10 4L9 4L9 5L10 5L10 8L9 8L9 6L8 6L8 8L9 8L9 10L8 10L8 11L7 11L7 10L6 10L6 11L5 11L5 8L3 8L3 9L4 9L4 12L5 12L5 13L3 13L3 10L2 10L2 8L0 8L0 11L1 11L1 12L0 12L0 17L1 17L1 15L3 15L3 16L2 16L2 17L7 17L7 16L6 16L6 15L8 15L8 18L9 18L9 20L8 20L8 22L9 22L9 20L10 20L10 23L8 23L8 25L9 25L9 24L10 24L10 23L11 23L11 20L10 20L10 19L12 19L12 21L14 21L14 24L13 24L13 25L15 25L15 22L16 22L16 23L17 23L17 22L19 22L19 21L21 21L21 16L22 16L22 18L24 18L24 19L23 19L23 22L20 22L20 23L18 23L18 25L19 25L19 24L21 24L21 25L22 25L22 24L24 24L24 25L25 25L25 18L24 18L24 16L25 16L25 14L24 14L24 13L25 13L25 10L24 10L24 9L25 9L25 8L24 8L24 9L19 9L19 8L18 8L18 9L19 9L19 10L16 10L16 9L17 9L17 6L16 6L16 8L14 8L14 7L15 7L15 6L14 6L14 5L15 5L15 4L16 4L16 5L17 5L17 3L15 3L15 4L14 4L14 2ZM12 4L12 5L11 5L11 7L12 7L12 9L10 9L10 10L9 10L9 11L10 11L10 10L12 10L12 11L13 11L13 13L11 13L11 12L10 12L10 13L9 13L9 14L8 14L8 12L7 12L7 11L6 11L6 12L7 12L7 13L6 13L6 14L3 14L3 15L4 15L4 16L5 16L5 15L6 15L6 14L8 14L8 15L9 15L9 14L10 14L10 15L11 15L11 14L14 14L14 13L16 13L16 12L17 12L17 13L18 13L18 14L19 14L19 15L20 15L20 16L21 16L21 15L20 15L20 13L21 13L21 14L23 14L23 13L24 13L24 12L21 12L21 10L20 10L20 11L19 11L19 13L18 13L18 11L15 11L15 10L14 10L14 11L13 11L13 10L12 10L12 9L14 9L14 8L13 8L13 7L14 7L14 6L13 6L13 7L12 7L12 5L14 5L14 4ZM6 8L6 9L7 9L7 8ZM22 10L22 11L24 11L24 10ZM14 11L14 12L15 12L15 11ZM1 13L1 14L2 14L2 13ZM16 14L16 16L15 16L15 15L12 15L12 16L9 16L9 17L14 17L14 18L12 18L12 19L13 19L13 20L14 20L14 19L16 19L16 16L18 16L18 15L17 15L17 14ZM23 15L23 16L24 16L24 15ZM14 16L14 17L15 17L15 16ZM17 17L17 20L20 20L20 17ZM18 18L18 19L19 19L19 18ZM12 22L12 23L13 23L13 22ZM21 23L21 24L22 24L22 23ZM16 24L16 25L17 25L17 24ZM0 0L0 7L7 7L7 0ZM1 1L1 6L6 6L6 1ZM2 2L2 5L5 5L5 2ZM18 0L18 7L25 7L25 0ZM19 1L19 6L24 6L24 1ZM20 2L20 5L23 5L23 2ZM0 18L0 25L7 25L7 18ZM1 19L1 24L6 24L6 19ZM2 20L2 23L5 23L5 20Z"
+                          fill="#000000"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+
+                  <div style="margin-top: 10px; text-align: center"></div>
+                </div>
+              </div>
+              <hr
+                style="
+                  margin-top: 1rem;
+                  margin-bottom: 1rem;
+                  border: 0;
+                  border-top: 2px dashed rgba(0, 0, 0, 0.1);
+                "
+              />
+              <div style="text-align: center">
+                <strong>02 Oct 2025</strong><br />
+                <p class="mb-0">13:00</p>
+                <p></p>
+              </div>
+              <hr
+                style="
+                  margin-top: 1rem;
+                  margin-bottom: 1rem;
+                  border: 0;
+                  border-top: 2px dashed rgba(0, 0, 0, 0.1);
+                "
+              />
+              <div style="margin-bottom: 10px">
+                <div style="color: #b2b2b2">Nama</div>
+                <div></div>
+              </div>
+            </div>
+            <button
+              onclick="closeModal(qrModal)"
+              type="button"
+              class="btn btn-close"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="42px"
+                width="42px"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- endQRModal -->
+      <!-- startRSVPModal -->
+      <div
+        class="modal fade"
+        id="rsvpModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="rsvpModal"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content p-4" style="height: 100%">
+            <!-- rsvp form -->
+            <rsvp-component
+              :lang='{"invitation_code":"Kode Undangan","validate_code":"Validasi Kode Undangan","name":"Nama","group_name":"Nama Grup","phone":"No Hp \/ WhatsApp","attendance":"Kehadiran?","yes":"Hadir","no":"Tidak Hadir","guest":"Orang","guest_count":"Jumlah Tamu","comment":"Komentar atau Ucapan","send":"Kirim","update":"Kirim","captcha_placeholder":"Ketik Text"}'
+              :invitation_id="688781"
+              name=""
+              code=""
+              :replace="true"
+              overlay="1"
+            ></rsvp-component>
+            <!-- rsvp form -->
+            <button
+              onclick="closeModal(rsvpModal)"
+              type="button"
+              class="btn btn-close"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="42px"
+                width="42px"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- endRSVPModal -->
+      <!-- watermark -->
+      <div id="waterMark" style="display: none">
+        <p
+          class="mb-1 animate__animated animate__fadeInUp animate__slower small animate__delay-1s"
+        >
+          Theme by Bertemu Moment <br />
+          Custom by Fadlul Fikri
+        </p>
+        <!-- <div
+          class="d-flex align-items-center justify-content-center animate__animated animate__fadeInUp animate__slower animate__delay-1s"
+        >
+          <div class="list-icon p-2">
+            <a
+              href="https://www.instagram.com/bertemu.moment?igsh=MXkwMmlqdGQ5M3NmZQ=="
+              target="_BLANK"
+              class="icon d-block"
+              rel="nofollow"
+            >
+              <img
+                src="./images/instagram.webp"
+                alt="instagram"
+                height="26px"
+                width="26px"
+              />
+            </a>
+          </div>
+          <div class="list-icon p-2">
+            <a
+              href="https://www.tiktok.com/@undangandigital.bertemu?_t=8pjglv9FJCS&amp;_r=1"
+              target="_BLANK"
+              class="icon d-block"
+              rel="nofollow"
+            >
+              <img
+                src="./images/tiktok.webp"
+                alt="tiktok"
+                height="26px"
+                width="26px"
+              />
+            </a>
+          </div>
+        </div> -->
+        <!-- <div
+          class="text-center animate__animated animate__fadeInUp animate__slower animate__delay-1s"
+        >
+          <a
+            class="d-block mx-auto"
+            href="https://bertemumoment.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="width: 100px; height: 40px"
+          >
+            <img
+              height="40"
+              width="100"
+              class="h-100 w-100"
+              style="object-fit: contain"
+              src="https://assets.satumomen.com/images/reseller/1733730534.png"
+              alt="Bertemu Moment"
+            />
+          </a>
+        </div> -->
+        <div
+          class="wm-music mt-3 text-center animate__animated animate__fadeInUp animate__slower animate__delay-1s"
+          style="font-size: 60%"
+        >
+          <div style="opacity: 0.5"><strong>Music:</strong></div>
+          <div style="opacity: 0.5">(cut 2.13) Kabagyan - Sadewok</div>
+        </div>
+      </div>
+      <!-- end watermark -->
+    </main>
+    <!-- illegal -->
+    <div
+      id="illegal"
+      class="container-mobile"
+      style="
+        background: #ffffff;
+        z-index: 9999;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+      "
+    >
+      <div class="modal-body modal-body d-flex flex-column align-items-center">
+        <div class="mb-4 text-center">
+          <svg width="90" height="90" fill="none">
+            <path
+              d="M36 28.024A18.05 18.05 0 0025.022 39M59.999 28.024A18.05 18.05 0 0170.975 39"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <ellipse
+              cx="37.5"
+              cy="43.5"
+              rx="4.5"
+              ry="7.5"
+              fill="currentColor"
+            ></ellipse>
+            <ellipse
+              cx="58.5"
+              cy="43.5"
+              rx="4.5"
+              ry="7.5"
+              fill="currentColor"
+            ></ellipse>
+            <path
+              d="M24.673 75.42a9.003 9.003 0 008.879 5.563m-8.88-5.562A8.973 8.973 0 0124 72c0-7.97 9-18 9-18s9 10.03 9 18a9 9 0 01-8.448 8.983m-8.88-5.562C16.919 68.817 12 58.983 12 48c0-19.882 16.118-36 36-36s36 16.118 36 36-16.118 36-36 36a35.877 35.877 0 01-14.448-3.017"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M41.997 71.75A14.94 14.94 0 0148 70.5c2.399 0 4.658.56 6.661 1.556a3 3 0 003.999-4.066 12 12 0 00-10.662-6.49 11.955 11.955 0 00-7.974 3.032c1.11 2.37 1.917 4.876 1.972 7.217z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          <h2 class="mb-3">Jangan Bikin Aku Sedih</h2>
+          <p>Kamu didapati mencoba menghapus watermark secara ilegal.</p>
+        </div>
+      </div>
+    </div>
+    <!-- end illegal -->
+
+    <!-- not support modal -->
+    <div
+      class="modal fade"
+      id="notSupport"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="notSupport"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 0.8rem">
+          <div
+            class="modal-body text-center justify-content-center align-items-center"
+          >
+            <h2>Pemberitahuan</h2>
+            <p>
+              Browser yang kamu gunakan mungkin kurang kompatibel. Beberapa
+              fungsi undangan ini mungkin tidak dapat berjalan dengan baik. Kami
+              merekomendasikan Chrome. Klik tombol dibawah ini untuk
+              mendownload.
+            </p>
+            <div class="d-flex justify-content-center">
+              <a
+                href="https://apps.apple.com/id/app/google-chrome/id535886823"
+                class="btn p-1"
+                target="_BLANK"
+              >
+                <img
+                  src="/images/btn_app_store.png"
+                  alt="AppStore"
+                  height="40px"
+                />
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.android.chrome&hl=in&gl=US"
+                class="btn p-1"
+                target="_BLANK"
+              >
+                <img
+                  src="/images/btn_play_store.png"
+                  alt="PlayStore"
+                  height="40px"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-outline-secondary btn-block rounded-pill"
+              onclick="closeModal(notSupport)"
+            >
+              Tetap Akses
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- not support modal -->
+
+    <!-- start script -->
+
+    <script src="./themes/theme-app.js"></script>
+
+    <script src="./themes/themesv2.js"></script>
+
+    <script>
+      var notSupport = document.getElementById("notSupport");
+      function checkBrowser() {
+        if (
+          navigator.userAgent.indexOf("UCBrowser") != -1 ||
+          navigator.userAgent.indexOf("MiuiBrowser") != -1 ||
+          navigator.userAgent.indexOf("OppoBrowser") != -1
+        ) {
+          showModal(notSupport);
+          if (loader) {
+            loader.style.display = "none";
+          }
+        }
+      }
+      checkBrowser();
+    </script>
+    <!-- end script -->
+    <script></script>
+  </body>
+</html>
