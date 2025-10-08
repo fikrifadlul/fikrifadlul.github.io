@@ -2418,38 +2418,27 @@
     </script>
     <!-- end script -->
     <script>
-      // 1️⃣ Ambil parameter "penerima" dari URL
       const params = new URLSearchParams(window.location.search);
-      const penerimaId = params.get("penerima");
-
-      // 2️⃣ Jika parameter ada, lanjutkan fetch JSON
+      const penerimaId = params.get('penerima');
+    
       if (penerimaId) {
-        fetch("../penerima.json")
-          .then((response) => {
+        fetch(`../penerima.json?cacheBust=${Date.now()}`)
+          .then(response => {
             if (!response.ok) {
               throw new Error("Gagal memuat data JSON");
             }
             return response.json();
           })
-          .then((data) => {
-            // 3️⃣ Cari penerima berdasarkan ID
-            const penerima = data.find((item) => item.id == penerimaId);
-
-            // 4️⃣ Tampilkan hasilnya
-            const namaEl = document.getElementById("guestNameSlot");
-            if (penerima) {
-              namaEl.textContent = penerima.nama;
-            } else {
-              namaEl.textContent = "Penerima tidak ditemukan.";
-            }
+          .then(data => {
+            const penerima = data.find(p => p.id == penerimaId);
+            const namaEl = document.getElementById('guestNameSlot');
+            namaEl.textContent = penerima ? penerima.nama : "Penerima tidak ditemukan.";
           })
-          .catch((error) => {
-            document.getElementById("guestNameSlot").textContent =
-              "Error: " + error.message;
+          .catch(error => {
+            document.getElementById('guestNameSlot').textContent = "Error: " + error.message;
           });
       } else {
-        document.getElementById("guestNameSlot").textContent =
-          "Keluarga Besar, Sahabat dan Rekan";
+        document.getElementById('guestNameSlot').textContent = "Penerima= tidak ditemukan.";
       }
     </script>
   </body>

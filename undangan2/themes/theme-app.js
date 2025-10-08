@@ -23459,11 +23459,11 @@
         /**
          * Show production mode tip message on boot?
          */
-        productionTip: "development" !== 'production',
+        productionTip: "production" !== 'production',
         /**
          * Whether to enable devtools
          */
-        devtools: "development" !== 'production',
+        devtools: "production" !== 'production',
         /**
          * Whether to record perf
          */
@@ -28452,7 +28452,7 @@
             strats.inject =
                 strats.computed =
                     function (parentVal, childVal, vm, key) {
-                        if (childVal && "development" !== 'production') {
+                        if (childVal && "production" !== 'production') {
                             assertObjectType(key, childVal, vm);
                         }
                         if (!parentVal)
@@ -34952,7 +34952,7 @@
                     mark('compile');
                 }
                 var _a = compileToFunctions(template, {
-                    outputSourceRange: "development" !== 'production',
+                    outputSourceRange: "production" !== 'production',
                     shouldDecodeNewlines: shouldDecodeNewlines,
                     shouldDecodeNewlinesForHref: shouldDecodeNewlinesForHref,
                     delimiters: options.delimiters,
