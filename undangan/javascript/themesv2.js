@@ -329,7 +329,7 @@ var initMusic = function initMusic() {
         videoId: videoId,
         events: {
           onReady: function onReady(event) {
-            console.log("YouTube player ready");
+            // console.log("YouTube player ready");
           }
         }
       });
@@ -374,7 +374,7 @@ var initMusic = function initMusic() {
               }, 100);
             }
           })["catch"](function (error) {
-            console.log("Autoplay prevented:", error);
+            // console.log("Autoplay prevented:", error);
           });
         }
       } else {
@@ -821,7 +821,7 @@ var openInvitation = function openInvitation(event) {
 
   // check fullscreen
   if (navigator.userAgent.indexOf("UCBrowser") != -1 || navigator.userAgent.indexOf("MiuiBrowser") != -1 || navigator.userAgent.includes("OppoBrowser") || navigator.userAgent.includes("HeyTapBrowser")) {
-    console.log("Browser not support portrait full screen mode");
+    // console.log("Browser not support portrait full screen mode");
   } else {
     openFullScreen();
   }
