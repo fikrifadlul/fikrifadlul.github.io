@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nama": "fadlul fikri",
+    "rekanan": "Pondok Ploso, Pondok PPTA",
+    "jenis_undangan": "Pangestu",
+    "mark": false,
+    "ket": "",
+    "column8": "Digital"
+  },
+  {
+    "id": 2,
+    "nama": "lailatul fitria",
+    "rekanan": "Pondok Ploso, Pondok PPTA",
+    "jenis_undangan": "Pangestu",
+    "mark": false,
+    "ket": "",
+    "column8": "Digital"
+  },
+  {
+    "id": 3,
+    "nama": "Teman-teman",
+    "rekanan": "Teman-teman",
+    "jenis_undangan": "Pangestu",
+    "mark": false,
+    "ket": "",
+    "column8": "Digital"
+  },
+  {
+    "id": 4,
+    "nama": "Mbak 'Ayun",
+    "rekanan": "Rumah/Tetangga/Teman Kecil, Pondok Al Falah",
+    "jenis_undangan": "Digital",
+    "mark": false,
+    "ket": "",
+    "column8": "Digital"
+  },
+  {
+    "id": 5,
+    "nama": "Mbak Urnika",
+    "rekanan": "Rumah/Tetangga/Teman Kecil, Pondok Al Falah",
+    "jenis_undangan": "Digital",
+    "mark": false,
+    "ket": "",
+    "column8": "Digital"
+  }
+]

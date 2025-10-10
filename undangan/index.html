@@ -11,6 +11,8 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="google" content="notranslate" />
     <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" href="../icon.png" />
+    <link rel="apple-touch-icon" href="../icon.png" />
     <title>Fikri &amp; Fitri</title>
     <meta name="title" content="Fikri &amp; Fitri" />
     <meta
@@ -23,6 +25,7 @@
       property="og:description"
       content="Tanpa Mengurangi Rasa Hormat. Kami Bermaksud Mengundang Bapak/Ibu/Saudara/i, Pada Acara Pernikahan Kami"
     />
+    <meta property="og:image" content="../icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -91,6 +94,36 @@
       }
       .editor-wrapper .frame-out {
         display: none;
+      }
+
+      /* Animasi untuk tombol konfirmasi */
+      @keyframes pulse-ring {
+        0% {
+          transform: scale(0.8);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1.2);
+          opacity: 0;
+        }
+      }
+
+      #btnKonfirmasi {
+        position: relative;
+        background-color: var(--inv-accent) !important;
+      }
+
+      #btnKonfirmasi::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        background-color: var(--inv-accent);
+        animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        z-index: -1;
       }
     </style>
 
@@ -354,7 +387,10 @@
                                 <div
                                   id="guestNameSlot"
                                   class="editable color-accent h5 font-weight-bold mb-1 animate__animated animate__fadeInUp animate__slower"
-                                  style="font-size: 20px;text-transform: capitalize;"
+                                  style="
+                                    font-size: 20px;
+                                    text-transform: capitalize;
+                                  "
                                 >
                                   Keluarga, Sahabat dan Rekan
                                 </div>
@@ -1985,6 +2021,25 @@
               </div>
               <!-- end invitation -->
               <div class="floating-action d-flex align-items-end flex-column">
+                <!-- <button
+                  id="btnKonfirmasi"
+                  onclick="showModal(qrModal)"
+                  class="btn btn-float"
+                  style="margin-bottom: 8px;"
+                  title="Konfirmasi Kehadiran"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"
+                    ></path>
+                  </svg>
+                </button> -->
                 <button
                   id="btnMusic"
                   onclick="playMusic()"
@@ -2122,67 +2177,179 @@
         aria-hidden="true"
       >
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content" style="height: 100%">
-            <div
-              style="
-                width: 100%;
-                aspect-ratio: 16/9;
-                background-size: cover;
-                background-position: center;
-              "
-            ></div>
+          <div
+            class="modal-content"
+            style="height: 100%; max-height: 90vh; overflow-y: auto"
+          >
             <div class="text-center py-4 px-4">
-              <!-- background-image: url(https://assets.satumomen.com/./images/invitation/cover-6887951758801527.png);  -->
-              <div>
-                <div class="mx-auto">
-                  <?xml version="1.0" encoding="UTF-8"?>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    width="180"
-                    height="180"
-                    viewBox="0 0 180 180"
-                  >
-                    <rect x="0" y="0" width="180" height="180" fill="#ffffff" />
-                    <g transform="scale(7.2)">
-                      <g transform="translate(0,0)">
-                        <path
-                          fill-rule="evenodd"
-                          d="M8 0L8 1L9 1L9 2L10 2L10 3L11 3L11 1L13 1L13 0L11 0L11 1L9 1L9 0ZM14 0L14 1L15 1L15 0ZM16 0L16 1L17 1L17 0ZM12 2L12 4L11 4L11 5L10 5L10 4L9 4L9 5L10 5L10 8L9 8L9 6L8 6L8 8L9 8L9 10L8 10L8 11L7 11L7 10L6 10L6 11L5 11L5 8L3 8L3 9L4 9L4 12L5 12L5 13L3 13L3 10L2 10L2 8L0 8L0 11L1 11L1 12L0 12L0 17L1 17L1 15L3 15L3 16L2 16L2 17L7 17L7 16L6 16L6 15L8 15L8 18L9 18L9 20L8 20L8 22L9 22L9 20L10 20L10 23L8 23L8 25L9 25L9 24L10 24L10 23L11 23L11 20L10 20L10 19L12 19L12 21L14 21L14 24L13 24L13 25L15 25L15 22L16 22L16 23L17 23L17 22L19 22L19 21L21 21L21 16L22 16L22 18L24 18L24 19L23 19L23 22L20 22L20 23L18 23L18 25L19 25L19 24L21 24L21 25L22 25L22 24L24 24L24 25L25 25L25 18L24 18L24 16L25 16L25 14L24 14L24 13L25 13L25 10L24 10L24 9L25 9L25 8L24 8L24 9L19 9L19 8L18 8L18 9L19 9L19 10L16 10L16 9L17 9L17 6L16 6L16 8L14 8L14 7L15 7L15 6L14 6L14 5L15 5L15 4L16 4L16 5L17 5L17 3L15 3L15 4L14 4L14 2ZM12 4L12 5L11 5L11 7L12 7L12 9L10 9L10 10L9 10L9 11L10 11L10 10L12 10L12 11L13 11L13 13L11 13L11 12L10 12L10 13L9 13L9 14L8 14L8 12L7 12L7 11L6 11L6 12L7 12L7 13L6 13L6 14L3 14L3 15L4 15L4 16L5 16L5 15L6 15L6 14L8 14L8 15L9 15L9 14L10 14L10 15L11 15L11 14L14 14L14 13L16 13L16 12L17 12L17 13L18 13L18 14L19 14L19 15L20 15L20 16L21 16L21 15L20 15L20 13L21 13L21 14L23 14L23 13L24 13L24 12L21 12L21 10L20 10L20 11L19 11L19 13L18 13L18 11L15 11L15 10L14 10L14 11L13 11L13 10L12 10L12 9L14 9L14 8L13 8L13 7L14 7L14 6L13 6L13 7L12 7L12 5L14 5L14 4ZM6 8L6 9L7 9L7 8ZM22 10L22 11L24 11L24 10ZM14 11L14 12L15 12L15 11ZM1 13L1 14L2 14L2 13ZM16 14L16 16L15 16L15 15L12 15L12 16L9 16L9 17L14 17L14 18L12 18L12 19L13 19L13 20L14 20L14 19L16 19L16 16L18 16L18 15L17 15L17 14ZM23 15L23 16L24 16L24 15ZM14 16L14 17L15 17L15 16ZM17 17L17 20L20 20L20 17ZM18 18L18 19L19 19L19 18ZM12 22L12 23L13 23L13 22ZM21 23L21 24L22 24L22 23ZM16 24L16 25L17 25L17 24ZM0 0L0 7L7 7L7 0ZM1 1L1 6L6 6L6 1ZM2 2L2 5L5 5L5 2ZM18 0L18 7L25 7L25 0ZM19 1L19 6L24 6L24 1ZM20 2L20 5L23 5L23 2ZM0 18L0 25L7 25L7 18ZM1 19L1 24L6 24L6 19ZM2 20L2 23L5 23L5 20Z"
-                          fill="#000000"
-                        />
-                      </g>
-                    </g>
-                  </svg>
+              <h3
+                class="mb-4"
+                style="
+                  color: var(--inv-accent);
+                  font-family: var(--font-accent);
+                "
+              >
+                Konfirmasi Kehadiran
+              </h3>
 
-                  <div style="margin-top: 10px; text-align: center"></div>
+              <!-- Form Input -->
+              <form id="googleSheetForm" class="text-left">
+                <div class="form-group mb-3">
+                  <label for="formNama" class="mb-2" style="font-weight: 600"
+                    >Nama Lengkap <span style="color: red">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="formNama"
+                    name="nama"
+                    placeholder="Masukkan nama lengkap"
+                    required
+                    style="
+                      border-radius: 8px;
+                      padding: 12px;
+                      border: 2px solid #e0e0e0;
+                    "
+                  />
                 </div>
-              </div>
-              <hr
-                style="
-                  margin-top: 1rem;
-                  margin-bottom: 1rem;
-                  border: 0;
-                  border-top: 2px dashed rgba(0, 0, 0, 0.1);
-                "
-              />
-              <div style="text-align: center">
-                <strong>01 Nov 2025</strong><br />
-                <p class="mb-0">14:00</p>
-                <p></p>
-              </div>
-              <hr
-                style="
-                  margin-top: 1rem;
-                  margin-bottom: 1rem;
-                  border: 0;
-                  border-top: 2px dashed rgba(0, 0, 0, 0.1);
-                "
-              />
-              <div style="margin-bottom: 10px">
-                <div style="color: #b2b2b2">Nama</div>
-                <div></div>
-              </div>
+
+                <div class="form-group mb-3">
+                  <label for="formEmail" class="mb-2" style="font-weight: 600"
+                    >Email <span style="color: red">*</span></label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="formEmail"
+                    name="email"
+                    placeholder="nama@email.com"
+                    required
+                    style="
+                      border-radius: 8px;
+                      padding: 12px;
+                      border: 2px solid #e0e0e0;
+                    "
+                  />
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="formTelepon" class="mb-2" style="font-weight: 600"
+                    >No. Telepon</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="formTelepon"
+                    name="telepon"
+                    placeholder="08xxxxxxxxxx"
+                    style="
+                      border-radius: 8px;
+                      padding: 12px;
+                      border: 2px solid #e0e0e0;
+                    "
+                  />
+                </div>
+
+                <div class="form-group mb-3">
+                  <label
+                    for="formKehadiran"
+                    class="mb-2"
+                    style="font-weight: 600"
+                    >Kehadiran <span style="color: red">*</span></label
+                  >
+                  <select
+                    class="form-control"
+                    id="formKehadiran"
+                    name="kehadiran"
+                    required
+                    style="
+                      border-radius: 8px;
+                      padding: 12px;
+                      border: 2px solid #e0e0e0;
+                    "
+                  >
+                    <option value="">Pilih kehadiran</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                    <option value="Masih Ragu">Masih Ragu</option>
+                  </select>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label
+                    for="formJumlahTamu"
+                    class="mb-2"
+                    style="font-weight: 600"
+                    >Jumlah Tamu</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="formJumlahTamu"
+                    name="jumlahTamu"
+                    placeholder="1"
+                    min="1"
+                    max="10"
+                    value="1"
+                    style="
+                      border-radius: 8px;
+                      padding: 12px;
+                      border: 2px solid #e0e0e0;
+                    "
+                  />
+                </div>
+
+                <div class="form-group mb-4">
+                  <label for="formPesan" class="mb-2" style="font-weight: 600"
+                    >Ucapan & Doa</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="formPesan"
+                    name="pesan"
+                    rows="4"
+                    placeholder="Tulis ucapan dan doa untuk kami..."
+                    style="
+                      border-radius: 8px;
+                      padding: 12px;
+                      border: 2px solid #e0e0e0;
+                    "
+                  ></textarea>
+                </div>
+
+                <div
+                  id="formMessage"
+                  class="alert"
+                  style="display: none; border-radius: 8px"
+                ></div>
+
+                <button
+                  type="submit"
+                  class="btn btn-block"
+                  id="submitBtn"
+                  style="
+                    background-color: var(--inv-accent);
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 12px;
+                    font-weight: 600;
+                    width: 100%;
+                    transition: all 0.3s ease;
+                  "
+                >
+                  <span id="btnText">Kirim Konfirmasi</span>
+                  <span id="btnLoading" style="display: none">
+                    <span
+                      class="spinner-border spinner-border-sm mr-2"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>
+                    Mengirim...
+                  </span>
+                </button>
+              </form>
+              <!-- End Form -->
             </div>
             <button
               onclick="closeModal(qrModal)"
@@ -2220,14 +2387,167 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content p-4" style="height: 100%">
             <!-- rsvp form -->
-            <rsvp-component
+            <!-- <rsvp-component
               :lang='{"invitation_code":"Kode Undangan","validate_code":"Validasi Kode Undangan","name":"Nama","group_name":"Nama Grup","phone":"No Hp \/ WhatsApp","attendance":"Kehadiran?","yes":"Hadir","no":"Tidak Hadir","guest":"Orang","guest_count":"Jumlah Tamu","comment":"Komentar atau Ucapan","send":"Kirim","update":"Kirim","captcha_placeholder":"Ketik Text"}'
               :invitation_id="688795"
               name=""
               code=""
               :replace="true"
               overlay="1"
-            ></rsvp-component>
+            ></rsvp-component> -->
+            <form id="googleSheetForm" class="text-left">
+              <div class="form-group mb-3">
+                <label for="formNama" class="mb-2" style="font-weight: 600"
+                  >Nama Lengkap <span style="color: red">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="formNama"
+                  name="nama"
+                  placeholder="Masukkan nama lengkap"
+                  required
+                  style="
+                    border-radius: 8px;
+                    padding: 12px;
+                    border: 2px solid #e0e0e0;
+                  "
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="formEmail" class="mb-2" style="font-weight: 600"
+                  >Email <span style="color: red">*</span></label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="formEmail"
+                  name="email"
+                  placeholder="nama@email.com"
+                  required
+                  style="
+                    border-radius: 8px;
+                    padding: 12px;
+                    border: 2px solid #e0e0e0;
+                  "
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="formTelepon" class="mb-2" style="font-weight: 600"
+                  >No. Telepon</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="formTelepon"
+                  name="telepon"
+                  placeholder="08xxxxxxxxxx"
+                  style="
+                    border-radius: 8px;
+                    padding: 12px;
+                    border: 2px solid #e0e0e0;
+                  "
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="formKehadiran" class="mb-2" style="font-weight: 600"
+                  >Kehadiran <span style="color: red">*</span></label
+                >
+                <select
+                  class="form-control"
+                  id="formKehadiran"
+                  name="kehadiran"
+                  required
+                  style="
+                    border-radius: 8px;
+                    padding: 12px;
+                    border: 2px solid #e0e0e0;
+                  "
+                >
+                  <option value="">Pilih kehadiran</option>
+                  <option value="Hadir">Hadir</option>
+                  <option value="Tidak Hadir">Tidak Hadir</option>
+                  <option value="Masih Ragu">Masih Ragu</option>
+                </select>
+              </div>
+
+              <div class="form-group mb-3">
+                <label
+                  for="formJumlahTamu"
+                  class="mb-2"
+                  style="font-weight: 600"
+                  >Jumlah Tamu</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="formJumlahTamu"
+                  name="jumlahTamu"
+                  placeholder="1"
+                  min="1"
+                  max="10"
+                  value="1"
+                  style="
+                    border-radius: 8px;
+                    padding: 12px;
+                    border: 2px solid #e0e0e0;
+                  "
+                />
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="formPesan" class="mb-2" style="font-weight: 600"
+                  >Ucapan & Doa</label
+                >
+                <textarea
+                  class="form-control"
+                  id="formPesan"
+                  name="pesan"
+                  rows="4"
+                  placeholder="Tulis ucapan dan doa untuk kami..."
+                  style="
+                    border-radius: 8px;
+                    padding: 12px;
+                    border: 2px solid #e0e0e0;
+                  "
+                ></textarea>
+              </div>
+
+              <div
+                id="formMessage"
+                class="alert"
+                style="display: none; border-radius: 8px"
+              ></div>
+
+              <button
+                type="submit"
+                class="btn btn-block"
+                id="submitBtn"
+                style="
+                  background-color: var(--inv-accent);
+                  color: white;
+                  border: none;
+                  border-radius: 8px;
+                  padding: 12px;
+                  font-weight: 600;
+                  width: 100%;
+                  transition: all 0.3s ease;
+                "
+              >
+                <span id="btnText">Kirim Konfirmasi</span>
+                <span id="btnLoading" style="display: none">
+                  <span
+                    class="spinner-border spinner-border-sm mr-2"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Mengirim...
+                </span>
+              </button>
+            </form>
             <!-- rsvp form -->
             <button
               onclick="closeModal(rsvpModal)"
@@ -2419,27 +2739,150 @@
     <!-- end script -->
     <script>
       const params = new URLSearchParams(window.location.search);
-      const penerimaId = params.get('penerima');
-    
+      const penerimaId = params.get("penerima");
+
       if (penerimaId) {
         fetch(`../penerima.json?cacheBust=${Date.now()}`)
-          .then(response => {
+          .then((response) => {
             if (!response.ok) {
               throw new Error("Gagal memuat data JSON");
             }
             return response.json();
           })
-          .then(data => {
-            const penerima = data.find(p => p.id == penerimaId);
-            const namaEl = document.getElementById('guestNameSlot');
-            namaEl.textContent = penerima ? penerima.nama : "Penerima tidak ditemukan.";
+          .then((data) => {
+            const penerima = data.find((p) => p.id == penerimaId);
+            const namaEl = document.getElementById("guestNameSlot");
+            namaEl.textContent = penerima
+              ? penerima.nama
+              : "Penerima tidak ditemukan.";
           })
-          .catch(error => {
-            document.getElementById('guestNameSlot').textContent = "Error: " + error.message;
+          .catch((error) => {
+            document.getElementById("guestNameSlot").textContent =
+              "Error: " + error.message;
           });
       } else {
-        document.getElementById('guestNameSlot').textContent = "Nama Penerima.";
+        document.getElementById("guestNameSlot").textContent = "Nama Penerima.";
       }
+    </script>
+
+    <!-- Google Sheets Integration Script -->
+    <script>
+      // KONFIGURASI GOOGLE SHEETS
+      // Ganti dengan URL Google Apps Script Web App Anda
+      const GOOGLE_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbwGRycOn-0HbgI6kULALmrAUWMVOQE57nXJQfUHvSHObfaJvVhQNxLS_M6D8Ge8AR-d/exec";
+
+      // Fungsi untuk mengirim data ke Google Sheets
+      async function submitToGoogleSheets(formData) {
+        try {
+          // Method 1: Menggunakan fetch dengan FormData
+          const formDataEncoded = new URLSearchParams();
+          for (const key in formData) {
+            formDataEncoded.append(key, formData[key]);
+          }
+
+          const response = await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            body: formDataEncoded,
+          });
+
+          // Karena mode no-cors, kita tidak bisa membaca response
+          // Tapi jika tidak ada error, berarti berhasil
+          return { success: true };
+        } catch (error) {
+          console.error("Error:", error);
+          throw error;
+        }
+      }
+
+      // Event listener untuk form submission
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("googleSheetForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const btnText = document.getElementById("btnText");
+        const btnLoading = document.getElementById("btnLoading");
+        const formMessage = document.getElementById("formMessage");
+
+        if (form) {
+          form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            // Validasi form
+            if (!form.checkValidity()) {
+              form.classList.add("was-validated");
+              return;
+            }
+
+            // Disable button dan tampilkan loading
+            submitBtn.disabled = true;
+            btnText.style.display = "none";
+            btnLoading.style.display = "inline-block";
+            formMessage.style.display = "none";
+
+            // Ambil data dari form
+            const formData = {
+              timestamp: new Date().toISOString(),
+              nama: document.getElementById("formNama").value,
+              email: document.getElementById("formEmail").value,
+              telepon: document.getElementById("formTelepon").value || "-",
+              kehadiran: document.getElementById("formKehadiran").value,
+              jumlahTamu:
+                document.getElementById("formJumlahTamu").value || "1",
+              pesan: document.getElementById("formPesan").value || "-",
+            };
+
+            try {
+              // Kirim data ke Google Sheets
+              await submitToGoogleSheets(formData);
+
+              // Tampilkan pesan sukses
+              formMessage.className = "alert alert-success";
+              formMessage.style.display = "block";
+              formMessage.innerHTML =
+                "<strong>Berhasil!</strong> Terima kasih atas konfirmasi kehadiran Anda.";
+
+              // Reset form
+              form.reset();
+              form.classList.remove("was-validated");
+
+              // Tutup modal setelah 2 detik
+              setTimeout(() => {
+                closeModal(qrModal);
+                formMessage.style.display = "none";
+              }, 2000);
+            } catch (error) {
+              // Tampilkan pesan error
+              formMessage.className = "alert alert-danger";
+              formMessage.style.display = "block";
+              formMessage.innerHTML =
+                "<strong>Gagal!</strong> Terjadi kesalahan. Silakan coba lagi.";
+            } finally {
+              // Enable button kembali
+              submitBtn.disabled = false;
+              btnText.style.display = "inline-block";
+              btnLoading.style.display = "none";
+            }
+          });
+        }
+      });
+
+      // Tambahkan hover effect untuk button
+      document.addEventListener("DOMContentLoaded", function () {
+        const submitBtn = document.getElementById("submitBtn");
+        if (submitBtn) {
+          submitBtn.addEventListener("mouseenter", function () {
+            this.style.opacity = "0.9";
+            this.style.transform = "translateY(-2px)";
+            this.style.boxShadow = "0 4px 12px rgba(163, 131, 78, 0.3)";
+          });
+
+          submitBtn.addEventListener("mouseleave", function () {
+            this.style.opacity = "1";
+            this.style.transform = "translateY(0)";
+            this.style.boxShadow = "none";
+          });
+        }
+      });
     </script>
   </body>
 </html>

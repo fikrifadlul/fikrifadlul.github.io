@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Form Konfirmasi Kehadiran</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .alert-info {
+            background-color: #d1ecf1;
+            border-color: #bee5eb;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .alert-success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .alert-danger {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .form-control {
+            border-radius: 8px !important;
+            padding: 12px !important;
+            border: 2px solid #e0e0e0 !important;
+            margin-bottom: 15px;
+        }
+        .btn-submit {
+            background-color: #a3834e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .btn-submit:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(163, 131, 78, 0.3);
+        }
+        .data-preview {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+        .data-preview pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h2 style="text-align: center; color: #a3834e; margin-bottom: 10px;">Form Konfirmasi Kehadiran</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            Form testing dengan integrasi Google Sheets
+        </p>
+
+        <div class="alert-info" id="infoBox">
+            <strong>ℹ️ Mode Live</strong><br>
+            Data akan dikirim ke Google Sheets DAN ditampilkan di bawah form untuk verifikasi.
+        </div>
+
+        <div id="statusMessage" class="alert" style="display: none; margin-bottom: 20px;"></div>
+
+        <form id="testForm">
+            <div class="form-group">
+                <label style="font-weight: 600;">Nama Lengkap <span style="color: red;">*</span></label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="nama" 
+                    name="nama"
+                    placeholder="Masukkan nama lengkap"
+                    required
+                />
+            </div>
+
+            <div class="form-group">
+                <label style="font-weight: 600;">Email <span style="color: red;">*</span></label>
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email" 
+                    name="email"
+                    placeholder="nama@email.com"
+                    required
+                />
+            </div>
+
+            <div class="form-group">
+                <label style="font-weight: 600;">No. Telepon</label>
+                <input 
+                    type="tel" 
+                    class="form-control" 
+                    id="telepon" 
+                    name="telepon"
+                    placeholder="08xxxxxxxxxx"
+                />
+            </div>
+
+            <div class="form-group">
+                <label style="font-weight: 600;">Kehadiran <span style="color: red;">*</span></label>
+                <select 
+                    class="form-control" 
+                    id="kehadiran" 
+                    name="kehadiran"
+                    required
+                >
+                    <option value="">Pilih kehadiran</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                    <option value="Masih Ragu">Masih Ragu</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label style="font-weight: 600;">Jumlah Tamu</label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="jumlahTamu" 
+                    name="jumlahTamu"
+                    placeholder="1"
+                    min="1"
+                    max="10"
+                    value="1"
+                />
+            </div>
+
+            <div class="form-group">
+                <label style="font-weight: 600;">Ucapan & Doa</label>
+                <textarea 
+                    class="form-control" 
+                    id="pesan" 
+                    name="pesan"
+                    rows="4"
+                    placeholder="Tulis ucapan dan doa untuk kami..."
+                ></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+                <span id="btnText">Kirim Konfirmasi</span>
+                <span id="btnLoading" style="display: none;">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Mengirim...
+                </span>
+            </button>
+        </form>
+
+        <div class="data-preview" id="dataPreview">
+            <h5 style="margin-bottom: 15px;">📊 Data yang akan dikirim:</h5>
+            <pre id="dataOutput"></pre>
+        </div>
+    </div>
+
+    <script>
+        // KONFIGURASI - Ganti dengan URL Google Apps Script Anda
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzJP6ONSamO5bHlWdhmKmqVRhQQZxXRWcVpjRXq74YsilNIc285XSeXBjb9eZaaGFRB/exec';
+        
+        // Fungsi untuk mengirim data ke Google Sheets
+        async function submitToGoogleSheets(formData) {
+            try {
+                const formDataEncoded = new URLSearchParams();
+                for (const key in formData) {
+                    formDataEncoded.append(key, formData[key]);
+                }
+                
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    body: formDataEncoded
+                });
+                
+                return { success: true };
+            } catch (error) {
+                console.error('Error:', error);
+                throw error;
+            }
+        }
+        
+        // Event listener untuk form
+        document.getElementById('testForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const btnLoading = document.getElementById('btnLoading');
+            const statusMessage = document.getElementById('statusMessage');
+            const preview = document.getElementById('dataPreview');
+            const output = document.getElementById('dataOutput');
+            
+            // Validasi form
+            if (!this.checkValidity()) {
+                this.classList.add('was-validated');
+                return;
+            }
+            
+            // Disable button dan tampilkan loading
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-block';
+            statusMessage.style.display = 'none';
+            
+            // Ambil data dari form
+            const formData = {
+                timestamp: new Date().toISOString(),
+                nama: document.getElementById('nama').value,
+                email: document.getElementById('email').value,
+                telepon: document.getElementById('telepon').value || '-',
+                kehadiran: document.getElementById('kehadiran').value,
+                jumlahTamu: document.getElementById('jumlahTamu').value || '1',
+                pesan: document.getElementById('pesan').value || '-'
+            };
+            
+            // Tampilkan data yang akan dikirim
+            const displayData = {
+                ...formData,
+                timestampFormatted: new Date().toLocaleString('id-ID', {
+                    timeZone: 'Asia/Jakarta',
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                })
+            };
+            
+            output.textContent = JSON.stringify(displayData, null, 2);
+            preview.style.display = 'block';
+            
+            try {
+                // Kirim data ke Google Sheets
+                console.log('Mengirim data ke Google Sheets...', formData);
+                await submitToGoogleSheets(formData);
+                
+                // Tampilkan pesan sukses
+                statusMessage.className = 'alert alert-success';
+                statusMessage.style.display = 'block';
+                statusMessage.innerHTML = '<strong>✅ Berhasil!</strong> Data telah dikirim ke Google Sheets dan ditampilkan di bawah.';
+                
+                // Reset form
+                this.reset();
+                this.classList.remove('was-validated');
+                
+                // Scroll ke preview
+                preview.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                
+                // Log ke console
+                console.log('✅ Data berhasil dikirim:', formData);
+                
+            } catch (error) {
+                // Tampilkan pesan error
+                statusMessage.className = 'alert alert-danger';
+                statusMessage.style.display = 'block';
+                statusMessage.innerHTML = '<strong>❌ Gagal!</strong> Terjadi kesalahan saat mengirim data. Silakan coba lagi.';
+                
+                console.error('❌ Error mengirim data:', error);
+            } finally {
+                // Enable button kembali
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline-block';
+                btnLoading.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
