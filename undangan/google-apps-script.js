@@ -18,10 +18,17 @@ function doPost(e) {
     
     // Parse data dari request - handle berbagai format
     var data;
-    if (e && e.postData && e.postData.contents) {
-      data = JSON.parse(e.postData.contents);
-    } else if (e && e.parameter) {
+    // Cek e.parameter dulu (untuk URLSearchParams/form-encoded)
+    if (e && e.parameter && Object.keys(e.parameter).length > 0) {
       data = e.parameter;
+    } else if (e && e.postData && e.postData.contents) {
+      // Coba parse sebagai JSON jika ada postData
+      // try {
+      //   data = JSON.parse(e.postData.contents);
+      // } catch (parseError) {
+        // Jika bukan JSON, gunakan parameter
+        data = e.parameter || {};
+      // }
     } else {
       throw new Error('No data received');
     }

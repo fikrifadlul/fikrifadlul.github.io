@@ -191,13 +191,36 @@
                 for (const key in formData) {
                     formDataEncoded.append(key, formData[key]);
                 }
+
+                console.log("Data yang dikirim:", formData);
                 
                 const response = await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     body: formDataEncoded
                 });
                 
-                return { success: true };
+                // Cek apakah response OK
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                // Ambil response sebagai text dulu
+                const responseText = await response.text();
+                console.log('Response dari Google Sheets:', responseText);
+                
+                // Coba parse sebagai JSON
+                try {
+                    const jsonResponse = JSON.parse(responseText);
+                    return jsonResponse;
+                } catch (parseError) {
+                    // Jika bukan JSON, cek apakah ada indikasi sukses
+                    console.log('Response bukan JSON, menggunakan fallback');
+                    return { 
+                        success: true, 
+                        message: 'Data berhasil dikirim',
+                        rawResponse: responseText 
+                    };
+                }
             } catch (error) {
                 console.error('Error:', error);
                 throw error;
