@@ -572,8 +572,8 @@
                               class="editable quotes mb-3"
                               style="font-size: 16px"
                             >
-                              “Karena hati tidak perlu memilih, ia selalu tahu
-                              kemana harus berlabuh”
+                              “Bukan kebetulan yang mempertemukan, melainkan kesepakatan alam yang sudah disetujui.
+                              Jauh sebelum kita menyadari, ia hanya mengikuti takdir yang sudah ditulis oleh Sang Maha Kasih”
                             </div>
                             <div
                               class="editable"
@@ -1371,7 +1371,7 @@
                                   class="btn-rsvp btn btn-primary mx-auto rounded-pill mb-4 animate__animated animate__fadeInUp animate__slow"
                                   style="gap: 8px"
                                 >
-                                  Kirim Ucapan RSVP
+                                  Kirim Ucapan
                                 </button>
                               </div>
                             </div>
@@ -1699,7 +1699,9 @@
                         <div
                           class="h-100 d-flex justify-content-center align-items-center"
                         >
-                          <div class="w-100 text-center">
+                          <div
+                            class="w-100 text-center"
+                          >
                             <div
                               class="color-accent h4 mb-2 editable animate__animated animate__fadeInDown animate__slower font-accent"
                               style="font-size: 28.8px"
@@ -1714,6 +1716,19 @@
                               pernikahan kami dengan kehadiran dan hadiah indah
                               Anda.
                             </div>
+                            <div
+                              class="editable copy-address mb-0"
+                              style="font-size: 14.4px"
+                            >
+                              Anda dapat mengirim kado ke:<br />Jl.Indanny,
+                              RT.01, RW.01, Dsn. Pasinan Kulon, <br />Ds.
+                              Kupang, Kec. Jetis - Mojokerto, Jawa Timur
+                            </div>
+                            <img src="./images/border.png" alt="border" class="w-100" style="display: block;
+                            position: absolute;
+                            top: 20%;
+                            height: 378px;
+                            left: -8px;">
                             <!-- <div
                               class="mt-3 p-4 rounded"
                               style="border: 1px solid var(--inv-border)"
@@ -1793,10 +1808,10 @@
                                   </div>
                                 </div>
                               </div>
-                            </div> -->
-                            <div
-                              class="mt-3 p-4 rounded"
                               style="border: 1px solid var(--inv-border)"
+                            </div> -->
+                            <!-- <div
+                              class="mt-3 p-4 rounded"
                             >
                               <div
                                 class="text-center mb-2 animate__animated animate__zoomIn animate__slow"
@@ -1815,7 +1830,7 @@
                                   Kupang, Kec. Jetis - Mojokerto, Jawa Timur
                                 </div>
                               </div>
-                            </div>
+                            </div> -->
                           </div>
                         </div>
                       </div>
@@ -1994,7 +2009,7 @@
                       class="icon ph-fill ph-couch"
                       style="color: currentColor"
                     ></i>
-                    <span>RSVP</span>
+                    <span style="font-size: 10px">Konfirmasi Hadir</span>
                   </li>
                   <li class="satumomen_menu_item">
                     <i
@@ -2742,15 +2757,36 @@
       const penerimaId = params.get("penerima");
 
       if (penerimaId) {
-        fetch(`../penerima.json?cacheBust=${Date.now()}`)
+        fetch(`https://docs.google.com/spreadsheets/d/e/2PACX-1vSg6PqTQH58pKaYCG5xC-KvcW-p16cAVpmZ_0do6LZJ9a5oI-nARUQL_5ztcTg2_CncNWYnd3OfDZBi/pub?output=csv`)
           .then((response) => {
             if (!response.ok) {
               throw new Error("Gagal memuat data JSON");
             }
-            return response.json();
+            return response.text();
           })
-          .then((data) => {
-            const penerima = data.find((p) => p.id == penerimaId);
+          .then((csvText) => {
+            // Parse CSV data
+            const rows = csvText.split('\n').slice(1); // Skip header row
+            const data = rows.map((row, index) => {
+              const columns = row.split(',');
+              return {
+                uuid: columns[0] || index + 1,
+                nama: columns[2] || '',
+                rekanan: columns[4] || '',
+                jenis_undangan: columns[5] || '',
+                mark: columns[6] === 'TRUE',
+                ket: columns[7] || '',
+                column8: columns[8] || ''
+              };
+            });
+
+            const penerima = data.find((p) => {
+              console.log(p.uuid, penerimaId, p.jenis_undangan);
+              if (p.jenis_undangan != "Digital") {
+                return false;
+              }
+              return p.uuid == penerimaId;
+            });
             const namaEl = document.getElementById("guestNameSlot");
             namaEl.textContent = penerima
               ? penerima.nama
