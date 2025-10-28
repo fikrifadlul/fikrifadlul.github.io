@@ -794,7 +794,7 @@
                               class="mt-2 link btn btn-primary btn-sm rounded-pill animate__animated animate__fadeInUp animate__slower"
                               rel="nofollow noreferrer noopener"
                               target="_blank"
-                              >@lailatulf</a
+                              >@lailatulfitria</a
                             > -->
                           </div>
                         </div>
@@ -1344,7 +1344,7 @@
 
                             <div
                               class="countdown-wrapper mx-auto mb-5 d-flex flex-column animate__animated animate__fadeInUp animate__slower"
-                              data-datetime="2025-11-22T14:00"
+                              data-datetime="2025-11-22T12:30"
                               style="max-width: 280px"
                             >
                               <div class="countdown text-center color-accent">
@@ -1426,8 +1426,9 @@
                                 </div>
 
                                 <button
-                                  class="btn-rsvp btn btn-primary mx-auto rounded-pill mb-4 animate__animated animate__fadeInUp animate__slow"
+                                  class="btn btn-primary mx-auto rounded-pill mb-4 animate__animated animate__fadeInUp animate__slow"
                                   style="gap: 8px"
+                                  onclick="showModal(qrModal)"
                                 >
                                   Kirim Ucapan
                                 </button>
@@ -1862,128 +1863,6 @@
                               </div>
                             </div>
                             <!-- End Box -->
-                            <!-- <div
-                              class="editable copy-address mb-0 animate__animated animate__fadeInDown animate__slower"
-                              style="font-size: 14.4px"
-                            >
-                              Jl.Indanny, RT.01, RW.01, Dsn. Pasinan Kulon,
-                              <br />Ds. Kupang, Kec. Jetis - Mojokerto, Jawa
-                              Timur
-                            </div> -->
-                            <!-- <img
-                              src="./images/border.png"
-                              alt="border"
-                              class="w-100"
-                              style="
-                                display: block;
-                                position: absolute;
-                                top: 20%;
-                                height: 378px;
-                                left: -8px;
-                              "
-                            /> -->
-                            <!-- <div
-                              class="mt-3 p-4 rounded"
-                              style="border: 1px solid var(--inv-border)"
-                            >
-                              <div
-                                class="d-flex animate__animated animate__zoomIn animate__slow"
-                              >
-                                <div class="mx-auto">
-                                  <div class="d-flex align-items-center mb-3">
-                                    <div
-                                      style="
-                                        width: 80px;
-                                        height: 50px;
-                                        overflow: hidden;
-                                      "
-                                      class="image-editable bg-white rounded"
-                                    >
-                                      <img
-                                        src="https://assets.satumomen.com/assets/logo-bca-biru-1687975058.png"
-                                        style="
-                                          width: 100%;
-                                          height: 100%;
-                                          object-fit: contain;
-                                        "
-                                        alt="no-image.jpg"
-                                      />
-                                    </div>
-
-                                    <div class="text-left pl-2">
-                                      <div
-                                        class="editable account-number font-weight-bold h5 mb-0"
-                                        style="font-size: 18px"
-                                      >
-                                        8801262473
-                                      </div>
-                                      <div
-                                        class="editable"
-                                        style="font-size: 14.4px"
-                                      >
-                                        Fadlul Fikri
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex align-items-center">
-                                    <div
-                                      style="
-                                        width: 80px;
-                                        height: 50px;
-                                        overflow: hidden;
-                                      "
-                                      class="image-editable bg-white rounded"
-                                    >
-                                      <img
-                                        src="https://assets.satumomen.com/assets/logo-bca-biru-1687975058.png"
-                                        style="
-                                          width: 100%;
-                                          height: 100%;
-                                          object-fit: contain;
-                                        "
-                                        alt="no-image.jpg"
-                                      />
-                                    </div>
-                                    <div class="text-left pl-2">
-                                      <div
-                                        class="editable account-number font-weight-bold h5 mb-0"
-                                        style="font-size: 18px"
-                                      >
-                                        4971013324
-                                      </div>
-                                      <div
-                                        class="editable"
-                                        style="font-size: 14.4px"
-                                      >
-                                        Rida Asysyifa
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              style="border: 1px solid var(--inv-border)"
-                            </div> -->
-                            <!-- <div
-                              class="mt-3 p-4 rounded"
-                            >
-                              <div
-                                class="text-center mb-2 animate__animated animate__zoomIn animate__slow"
-                              >
-                                <div
-                                  class="editable font-weight-bold h5 color-accent mb-2"
-                                >
-                                  Kirim Kado
-                                </div>
-                                <div
-                                  class="editable copy-address mb-0"
-                                  style="font-size: 14.4px"
-                                >
-                                  Anda dapat mengirim kado ke:<br />Jl.Indanny,
-                                  RT.01, RW.01, Dsn. Pasinan Kulon, <br />Ds.
-                                  Kupang, Kec. Jetis - Mojokerto, Jawa Timur
-                                </div>
-                              </div>
-                            </div> -->
                           </div>
                         </div>
                       </div>
@@ -2189,25 +2068,6 @@
               </div>
               <!-- end invitation -->
               <div class="floating-action d-flex align-items-end flex-column">
-                <!-- <button
-                  id="btnKonfirmasi"
-                  onclick="showModal(qrModal)"
-                  class="btn btn-float"
-                  style="margin-bottom: 8px;"
-                  title="Konfirmasi Kehadiran"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    fill="currentColor"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"
-                    ></path>
-                  </svg>
-                </button> -->
                 <button
                   id="btnMusic"
                   onclick="playMusic()"
@@ -2383,7 +2243,7 @@
 
                 <div class="form-group mb-3">
                   <label for="formEmail" class="mb-2" style="font-weight: 600"
-                    >Email <span style="color: red">*</span></label
+                    >Email</label
                   >
                   <input
                     type="email"
@@ -2391,7 +2251,6 @@
                     id="formEmail"
                     name="email"
                     placeholder="nama@email.com"
-                    required
                     style="
                       border-radius: 8px;
                       padding: 12px;
@@ -2432,7 +2291,7 @@
                     required
                     style="
                       border-radius: 8px;
-                      padding: 12px;
+                      padding: 3px;
                       border: 2px solid #e0e0e0;
                     "
                   >
@@ -2544,204 +2403,6 @@
         </div>
       </div>
       <!-- endQRModal -->
-      <!-- startRSVPModal -->
-      <div
-        class="modal fade"
-        id="rsvpModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="rsvpModal"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content p-4" style="height: 100%">
-            <!-- rsvp form -->
-            <!-- <rsvp-component
-              :lang='{"invitation_code":"Kode Undangan","validate_code":"Validasi Kode Undangan","name":"Nama","group_name":"Nama Grup","phone":"No Hp \/ WhatsApp","attendance":"Kehadiran?","yes":"Hadir","no":"Tidak Hadir","guest":"Orang","guest_count":"Jumlah Tamu","comment":"Komentar atau Ucapan","send":"Kirim","update":"Kirim","captcha_placeholder":"Ketik Text"}'
-              :invitation_id="688795"
-              name=""
-              code=""
-              :replace="true"
-              overlay="1"
-            ></rsvp-component> -->
-            <form id="googleSheetForm" class="text-left">
-              <div class="form-group mb-3">
-                <label for="formNama" class="mb-2" style="font-weight: 600"
-                  >Nama Lengkap <span style="color: red">*</span></label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="formNama"
-                  name="nama"
-                  placeholder="Masukkan nama lengkap"
-                  required
-                  style="
-                    border-radius: 8px;
-                    padding: 12px;
-                    border: 2px solid #e0e0e0;
-                  "
-                />
-              </div>
-
-              <div class="form-group mb-3">
-                <label for="formEmail" class="mb-2" style="font-weight: 600"
-                  >Email <span style="color: red">*</span></label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="formEmail"
-                  name="email"
-                  placeholder="nama@email.com"
-                  required
-                  style="
-                    border-radius: 8px;
-                    padding: 12px;
-                    border: 2px solid #e0e0e0;
-                  "
-                />
-              </div>
-
-              <div class="form-group mb-3">
-                <label for="formTelepon" class="mb-2" style="font-weight: 600"
-                  >No. Telepon</label
-                >
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="formTelepon"
-                  name="telepon"
-                  placeholder="08xxxxxxxxxx"
-                  style="
-                    border-radius: 8px;
-                    padding: 12px;
-                    border: 2px solid #e0e0e0;
-                  "
-                />
-              </div>
-
-              <div class="form-group mb-3">
-                <label for="formKehadiran" class="mb-2" style="font-weight: 600"
-                  >Kehadiran <span style="color: red">*</span></label
-                >
-                <select
-                  class="form-control"
-                  id="formKehadiran"
-                  name="kehadiran"
-                  required
-                  style="
-                    border-radius: 8px;
-                    padding: 12px;
-                    border: 2px solid #e0e0e0;
-                  "
-                >
-                  <option value="">Pilih kehadiran</option>
-                  <option value="Hadir">Hadir</option>
-                  <option value="Tidak Hadir">Tidak Hadir</option>
-                  <option value="Masih Ragu">Masih Ragu</option>
-                </select>
-              </div>
-
-              <div class="form-group mb-3">
-                <label
-                  for="formJumlahTamu"
-                  class="mb-2"
-                  style="font-weight: 600"
-                  >Jumlah Tamu</label
-                >
-                <input
-                  type="number"
-                  class="form-control"
-                  id="formJumlahTamu"
-                  name="jumlahTamu"
-                  placeholder="1"
-                  min="1"
-                  max="10"
-                  value="1"
-                  style="
-                    border-radius: 8px;
-                    padding: 12px;
-                    border: 2px solid #e0e0e0;
-                  "
-                />
-              </div>
-
-              <div class="form-group mb-4">
-                <label for="formPesan" class="mb-2" style="font-weight: 600"
-                  >Ucapan & Doa</label
-                >
-                <textarea
-                  class="form-control"
-                  id="formPesan"
-                  name="pesan"
-                  rows="4"
-                  placeholder="Tulis ucapan dan doa untuk kami..."
-                  style="
-                    border-radius: 8px;
-                    padding: 12px;
-                    border: 2px solid #e0e0e0;
-                  "
-                ></textarea>
-              </div>
-
-              <div
-                id="formMessage"
-                class="alert"
-                style="display: none; border-radius: 8px"
-              ></div>
-
-              <button
-                type="submit"
-                class="btn btn-block"
-                id="submitBtn"
-                style="
-                  background-color: var(--inv-accent);
-                  color: white;
-                  border: none;
-                  border-radius: 8px;
-                  padding: 12px;
-                  font-weight: 600;
-                  width: 100%;
-                  transition: all 0.3s ease;
-                "
-              >
-                <span id="btnText">Kirim Konfirmasi</span>
-                <span id="btnLoading" style="display: none">
-                  <span
-                    class="spinner-border spinner-border-sm mr-2"
-                    role="status"
-                    aria-hidden="true"
-                  ></span>
-                  Mengirim...
-                </span>
-              </button>
-            </form>
-            <!-- rsvp form -->
-            <button
-              onclick="closeModal(rsvpModal)"
-              type="button"
-              class="btn btn-close"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="42px"
-                width="42px"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18 18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- endRSVPModal -->
       <!-- watermark -->
       <div id="waterMark" class="mt-5" style="display: none">
         <p
@@ -2789,26 +2450,6 @@
             </a>
           </div>
         </div>
-        <!-- <div
-          class="text-center animate__animated animate__fadeInUp animate__slower animate__delay-1s"
-        >
-          <a
-            class="d-block mx-auto"
-            href="https://bertemumoment.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="width: 100px; height: 40px"
-          >
-            <img
-              height="40"
-              width="100"
-              class="h-100 w-100"
-              style="object-fit: contain"
-              src="https://assets.satumomen.com/./images/reseller/1733730534.png"
-              alt="Bertemu Moment"
-            />
-          </a>
-        </div> -->
         <div
           class="wm-music mt-3 text-center animate__animated animate__fadeInUp animate__slower animate__delay-1s"
           style="font-size: 60%"
@@ -2884,7 +2525,6 @@
     <!-- start script -->
 
     <script src="javascript/theme-app.js"></script>
-
     <script src="javascript/themesv2.js"></script>
 
     <script>
@@ -2954,121 +2594,109 @@
     <!-- Google Sheets Integration Script -->
     <script>
       // KONFIGURASI GOOGLE SHEETS
-      // Ganti dengan URL Google Apps Script Web App Anda
-      const GOOGLE_SCRIPT_URL =
-        "https://script.google.com/macros/s/AKfycbwGRycOn-0HbgI6kULALmrAUWMVOQE57nXJQfUHvSHObfaJvVhQNxLS_M6D8Ge8AR-d/exec";
-
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxXIsmDEMDKTZhJd269kIVli-2j4qxU0B0NkpjCJvfoIj1AY_MPZEt9jqCUuhorwd92/exec';
+        
       // Fungsi untuk mengirim data ke Google Sheets
       async function submitToGoogleSheets(formData) {
         try {
-          // Method 1: Menggunakan fetch dengan FormData
-          const formDataEncoded = new URLSearchParams();
-          for (const key in formData) {
-            formDataEncoded.append(key, formData[key]);
-          }
-
           const response = await fetch(GOOGLE_SCRIPT_URL, {
             method: "POST",
-            body: formDataEncoded,
+            body: formData,
           });
 
-          // Karena mode no-cors, kita tidak bisa membaca response
-          // Tapi jika tidak ada error, berarti berhasil
+          // console.log('Data berhasil dikirim');
           return { success: true };
         } catch (error) {
-          console.error("Error:", error);
+          console.error("Error saat mengirim data:", error);
           throw error;
         }
       }
 
-      // Event listener untuk form submission
-      document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("googleSheetForm");
-        const submitBtn = document.getElementById("submitBtn");
-        const btnText = document.getElementById("btnText");
-        const btnLoading = document.getElementById("btnLoading");
-        const formMessage = document.getElementById("formMessage");
-
-        if (form) {
-          form.addEventListener("submit", async function (e) {
-            e.preventDefault();
-
-            // Validasi form
-            if (!form.checkValidity()) {
-              form.classList.add("was-validated");
-              return;
-            }
-
-            // Disable button dan tampilkan loading
-            submitBtn.disabled = true;
-            btnText.style.display = "none";
-            btnLoading.style.display = "inline-block";
-            formMessage.style.display = "none";
-
+      // Fungsi untuk menangani form submission
+      function setupFormSubmission(formId) {
+        const form = document.getElementById(formId);
+        if (!form) {
+          console.error(`Form dengan ID ${formId} tidak ditemukan`);
+          return;
+        }
+        
+        const submitBtn = form.querySelector("button[type='submit']");
+        const btnText = form.querySelector("#btnText, #btnText2");
+        const btnLoading = form.querySelector("#btnLoading, #btnLoading2");
+        const formMessage = form.querySelector("#formMessage, #formMessage2");
+        
+        form.addEventListener('submit', async function(e) {
+          console.log('Form submission dimulai');
+          e.preventDefault(); // Mencegah form melakukan submit default
+          e.stopPropagation(); // Menghentikan event bubbling
+          
+          // Validasi form
+          if (!form.checkValidity()) {
+            console.log('Validasi form gagal');
+            form.classList.add("was-validated");
+            return;
+          }
+          
+          // Disable button dan tampilkan loading
+          if (submitBtn) submitBtn.disabled = true;
+          if (btnText) btnText.style.display = "none";
+          if (btnLoading) btnLoading.style.display = "inline-block";
+          if (formMessage) formMessage.style.display = "none";
+          
+          try {
             // Ambil data dari form
-            const formData = {
-              timestamp: new Date().toISOString(),
-              nama: document.getElementById("formNama").value,
-              email: document.getElementById("formEmail").value,
-              telepon: document.getElementById("formTelepon").value || "-",
-              kehadiran: document.getElementById("formKehadiran").value,
-              jumlahTamu:
-                document.getElementById("formJumlahTamu").value || "1",
-              pesan: document.getElementById("formPesan").value || "-",
-            };
-
-            try {
-              // Kirim data ke Google Sheets
-              await submitToGoogleSheets(formData);
-
-              // Tampilkan pesan sukses
+            const formData = new FormData(form);
+            formData.append('timestamp', new Date().toISOString());            
+            
+            // console.log('Data yang akan dikirim:', Object.fromEntries(formData));
+            
+            // Kirim data ke Google Sheets
+            await submitToGoogleSheets(formData);
+            
+            // Tampilkan pesan sukses
+            if (formMessage) {
               formMessage.className = "alert alert-success";
               formMessage.style.display = "block";
-              formMessage.innerHTML =
-                "<strong>Berhasil!</strong> Terima kasih atas konfirmasi kehadiran Anda.";
-
-              // Reset form
-              form.reset();
-              form.classList.remove("was-validated");
-
-              // Tutup modal setelah 2 detik
-              setTimeout(() => {
-                closeModal(qrModal);
-                formMessage.style.display = "none";
-              }, 2000);
-            } catch (error) {
-              // Tampilkan pesan error
+              formMessage.innerHTML = "<strong>Berhasil!</strong> Terima kasih atas konfirmasi kehadiran Anda.";
+            }
+            
+            // Reset form
+            form.reset();
+            form.classList.remove("was-validated");
+            
+            // Tutup modal setelah 2 detik
+            setTimeout(() => {
+              if (formMessage) formMessage.style.display = "none";
+              closeModal(qrModal)
+            }, 2000);
+            
+          } catch (error) {
+            console.error('Error saat mengirim form:', error);
+            
+            // Tampilkan pesan error
+            if (formMessage) {
               formMessage.className = "alert alert-danger";
               formMessage.style.display = "block";
-              formMessage.innerHTML =
-                "<strong>Gagal!</strong> Terjadi kesalahan. Silakan coba lagi.";
-            } finally {
-              // Enable button kembali
-              submitBtn.disabled = false;
-              btnText.style.display = "inline-block";
-              btnLoading.style.display = "none";
+              formMessage.innerHTML = "<strong>Gagal!</strong> Terjadi kesalahan. Silakan coba lagi.";
             }
-          });
-        }
+            
+          } finally {
+            // Reset tombol
+            if (submitBtn) submitBtn.disabled = false;
+            if (btnText) btnText.style.display = "inline-block";
+            if (btnLoading) btnLoading.style.display = "none";
+          }
+        });
+      }
+      
+      // Inisialisasi form saat dokumen siap
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        // Setup form pertama
+        setupFormSubmission('googleSheetForm');
+        
       });
-
-      // Tambahkan hover effect untuk button
-      document.addEventListener("DOMContentLoaded", function () {
-        const submitBtn = document.getElementById("submitBtn");
-        if (submitBtn) {
-          submitBtn.addEventListener("mouseenter", function () {
-            this.style.opacity = "0.9";
-            this.style.transform = "translateY(-2px)";
-            this.style.boxShadow = "0 4px 12px rgba(163, 131, 78, 0.3)";
-          });
-
-          submitBtn.addEventListener("mouseleave", function () {
-            this.style.opacity = "1";
-            this.style.transform = "translateY(0)";
-            this.style.boxShadow = "none";
-          });
-        }
-      });
+            
     </script>
   </body>
 </html>
