@@ -165,9 +165,7 @@
       </div>
       <!-- music -->
       <audio id="music" loop autoplay>
-        <source
-          src="./musics/satu-shaf-di-belakangku-arvian-dwi.mp3"
-        />
+        <source src="./musics/satu-shaf-di-belakangku-arvian-dwi.mp3" />
       </audio>
       <!-- end music -->
       <div
@@ -714,7 +712,7 @@
                                 "
                               >
                                 <img
-                                  src="https://assets.satumomen.com/assets/pengantin-pria-ilustrasi-1688039880.jpg"
+                                  src="./images/pengantin-pria.jpg"
                                   style="
                                     width: 100%;
                                     height: 100%;
@@ -739,7 +737,7 @@
                                 "
                               >
                                 <img
-                                  src="https://assets.satumomen.com/assets/pengantin-wanita-ilustrasi-1688039849.jpg"
+                                  src="./images/pengantin-wanita.jpg"
                                   style="
                                     width: 100%;
                                     height: 100%;
@@ -2937,11 +2935,7 @@
             });
 
             const penerima = data.find((p) => {
-              console.log(p.uuid, penerimaId, p.jenis_undangan);
-              if (p.jenis_undangan != "Digital") {
-                return false;
-              }
-              return p.uuid == penerimaId;
+                return p.uuid === penerimaId;
             });
             const namaEl = document.getElementById("guestNameSlot");
             namaEl.textContent = penerima
