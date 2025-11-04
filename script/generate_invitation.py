@@ -6,20 +6,28 @@ def generate_invitation_message(name, uuid):
     return f'''Assalamu'alaikum warahmatullahi wabarakatuh, *{name}*
 
 Bismillahirrahmanirrahim 🕌
-Alhamdulillah, dengan izin Allah SWT kami akan menempuh jalan baru dalam hidup kami 💍✨
-Dengan penuh kegembiraan dan rendah hati kami mengundang panjenengan untuk hadir dan memberikan doa restu pada hari bahagia kami 🤲😊
+Tanpa mengurangi rasa hormat kami. 
+Alhamdulillah, dengan izin Allah SWT kami akan menempuh jalan baru dalam hidup kami 💍✨.
+Dengan penuh kegembiraan dan rendah hati, perkenankan kami mengundang panjenengan untuk hadir dan memberikan doa restu pada hari bahagia kami 🤲😊
 
-Link undangan digitalnya ada di bawah ini ya ⬇
+Informasi mengenai detail acara, lokasi, dan waktu lebih lengkap dapat diakses pada tautan terlampir:
+
 https://fikrifadlul.github.io/undangan/?penerima={uuid}
 
 بَارَكَ اللهُ لَكُماَ وَبَارَكَ عَلَيْكُماَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ 🤲✨ 
-Semoga Allah memberkahi kami, menyatukan kita dalam kebaikan 🌸
+Semoga Allah memberkahi kami, menyatukan kami dalam kebaikan 🌸
 
-Wassalamu'alaikum warahmatullahi wabarakatuh'''
+Merupakan suatu kebahagiaan bagi kami jika panjenengan dapat hadir dan memberikan restu di acara kami.
+
+Wassalamu'alaikum warahmatullahi wabarakatuh
+
+dari kami yang berbahagia
+*Fikri & Fitri*
+'''
 
 def main():
     # Define file paths
-    csv_path = Path(__file__).parent / 'tamu-undangan.csv'
+    csv_path = Path(__file__).parent / 'tamu-undangan - v3.csv'
     output_dir = Path(__file__).parent / 'undangan'
     output_dir.mkdir(exist_ok=True)
     
